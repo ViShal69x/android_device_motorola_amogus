@@ -1237,7 +1237,6 @@ etc/permissions/telephonyservice.xml
 vendor/bin/ATFWD-daemon
 vendor/bin/hw/qcrild
 vendor/bin/adpl
-vendor/bin/ipacm-diag
 vendor/bin/mutualex
 vendor/bin/netmgrd
 vendor/bin/port-bridge
@@ -1254,7 +1253,6 @@ vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/dataqti.rc
 vendor/etc/init/init-qcril-data.rc
-vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/ipacm.rc
 vendor/etc/init/ipa_fws.rc
 vendor/etc/init/mutualex.rc
