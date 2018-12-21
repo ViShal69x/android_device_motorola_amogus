@@ -532,6 +532,7 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi Display
 PRODUCT_PACKAGES += \
-    libmediaextractorservice
+    libmediaextractorservice \
+    libwfdaac_proprietary
 
 $(call inherit-product, vendor/motorola/rav/rav-vendor.mk)
