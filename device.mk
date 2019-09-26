@@ -173,7 +173,7 @@ PRODUCT_PACKAGES += \
     libvulkan \
     libtinyxml \
     vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.mapper@2.0.vendor
+    vendor.qti.hardware.display.mapper@3.0
 
 # DRM
 PRODUCT_PACKAGES += \
