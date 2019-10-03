@@ -293,7 +293,7 @@ BOARD_ROOT_EXTRA_FOLDERS := persist
 VENDOR_SECURITY_PATCH := 2020-03-01
 
 # SELinux
-include device/qcom/sepolicy-legacy-um/sepolicy.mk
+include device/qcom/sepolicy_vndr/SEPolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
@@ -334,5 +334,6 @@ BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_AP  := "ap"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 TARGET_DISABLE_WCNSS_CONFIG_COPY := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
