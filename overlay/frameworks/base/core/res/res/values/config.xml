@@ -193,31 +193,6 @@
          The default is false. -->
     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
 
-    <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         USB interfaces.  If the device doesn't want to support tething over USB this should
-         be empty.  An example would be "usb.*" -->
-    <string-array translatable="false" name="config_tether_usb_regexs">
-        <item>"usb\\d"</item>
-        <item>"rndis\\d"</item>
-    </string-array>
-
-    <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
-         should be empty.  An example would be "softap.*" -->
-    <string-array translatable="false" name="config_tether_wifi_regexs">
-        <item>wlan0</item>
-        <item>wigig0</item>
-        <item>softap0</item>
-    </string-array>
-
-    <!-- List of regexpressions describing the interface (if any) that represent tetherable
-         bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
-         should be empty. -->
-    <string-array translatable="false" name="config_tether_bluetooth_regexs">
-        <item>bnep\\d</item>
-        <item>bt-pan</item>
-    </string-array>
-
     <!-- When true, the tethering upstream network follows the current default
          Internet network (except when the current default network is mobile,
          in which case a DUN network will be used if required). -->
@@ -343,10 +318,6 @@
         <item>ehrpd:4094,87380,1048576,4096,16384,262144</item>
     </string-array>
 
-    <!-- Configure wifi tcp buffersizes in the form:
-         rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
-    <string name="config_wifi_tcp_buffers" translatable="false">131072,262144,6287200,4096,221184,3145728</string>
-
     <!-- This string array should be overridden by the device to present a list of radio
          attributes.  This is used by the connectivity manager to decide which networks can coexist
          based on the hardware -->
@@ -387,22 +358,6 @@
 
     <!-- Boolean indicating whether the wifi chipset has 5GHz frequency band support -->
     <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
-
-    <!-- Boolean indicating whether the wifi chipset supports background scanning mechanism.
-         This mechanism allows the host to remain in suspend state and the dongle to actively
-         scan and wake the host when a configured SSID is detected by the dongle. This chipset
-         capability can provide power savings when wifi needs to be always kept on. -->
-    <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
-
-    <!-- Wifi driver supports batched scan -->
-    <bool translatable="false" name="config_wifi_batched_scan_supported">true</bool>
-
-    <!-- Boolean indicating whether or not to revert to default country code when cellular
-         radio is unable to find any MCC information to infer wifi country code from -->
-    <bool translatable="false" name="config_wifi_revert_country_code_on_cellular_loss">true</bool>
-
-    <!-- Boolean indicating whether or not wifi should turn off when emergency call is made -->
-    <bool translatable="false" name="config_wifi_turn_off_during_emergency_call">true</bool>
 
     <!-- MMS user agent string -->
     <string name="config_mms_user_agent" translatable="false">motog7</string>
@@ -492,9 +447,6 @@
          * The device must be provisioned with HDCP keys (for protected content).
     -->
     <bool name="config_enableWifiDisplay">true</bool>
-
-    <!-- Enable ACS (auto channel selection) for Wifi hotspot (SAP) -->
-    <bool translatable="false" name="config_wifi_softap_acs_supported">true</bool>
 
     <!-- Remote server that can provide NTP responses. -->
     <string translatable="false" name="config_ntpServer">1.android.pool.ntp.org</string>
