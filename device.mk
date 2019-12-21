@@ -500,6 +500,9 @@ PRODUCT_PACKAGES += \
     libgui_vendor \
     vndk_package
 
+# VNDK
+PRODUCT_PRODUCT_VNDK_VERSION := current
+
 # Wifi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
