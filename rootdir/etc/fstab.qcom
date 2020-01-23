@@ -9,7 +9,7 @@
 system                                                  /system                  ext4    ro,barrier=1                                         wait,slotselect,logical,first_stage_mount
 vendor                                                  /vendor                  ext4    ro,barrier=1                                         wait,slotselect,logical,first_stage_mount
 product                                                 /product                 ext4    ro,barrier=1                                         wait,slotselect,logical,first_stage_mount
-/dev/block/bootdevice/by-name/metadata                  /metadata                ext4    noatime,nosuid,nodev,discard                         wait,formattable,first_stage_mount
+/dev/block/bootdevice/by-name/metadata                  /metadata                ext4    noatime,nosuid,nodev,discard                         wait,formattable,first_stage_mount,check
 /dev/block/bootdevice/by-name/userdata                  /data                    f2fs    rw,discard,nosuid,nodev,noatime,nodiratime,nobarrier,reserve_root=32768,resgid=1065   latemount,wait,check,formattable
 /devices/platform/soc/4784000.sdhci/mmc_host*           auto                     auto    defaults                                             wait,voldmanaged=sdcard1:auto,encryptable=userdata
 /dev/block/bootdevice/by-name/modem                     /vendor/firmware_mnt     ext4    ro,nosuid,nodev,context=u:object_r:firmware_file:s0  wait,slotselect
