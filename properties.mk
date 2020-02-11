@@ -127,7 +127,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    media.stagefright.thumbnail.prefer_hw_codecs=true
+    media.stagefright.thumbnail.prefer_hw_codecs=true \
+    ro.media.recorder-max-base-layer-fps=60
 
 # OMX
 # Rank OMX SW codecs lower than OMX HW codecs
