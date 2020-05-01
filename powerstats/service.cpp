@@ -56,22 +56,22 @@ int main(int /* argc */, char ** /* argv */) {
 
     PowerStats *service = new PowerStats();
 
-    // Add power entities related to rpmh
+    // Add power entities related to rpm
     const uint64_t RPM_CLK = 19200;  // RPM runs at 19.2Mhz. Divide by 19200 for msec
     std::function<uint64_t(uint64_t)> rpmConvertToMs = [](uint64_t a) { return a / RPM_CLK; };
     std::vector<StateResidencyConfig> rpmStateResidencyConfigs = {
         {.name = "Sleep",
          .entryCountSupported = true,
-         .entryCountPrefix = "Sleep Count:",
+         .entryCountPrefix = "xo_count:",
          .totalTimeSupported = true,
-         .totalTimePrefix = "Sleep Accumulated Duration:",
+         .totalTimePrefix = "xo_accumulated_duration:",
          .totalTimeTransform = rpmConvertToMs,
          .lastEntrySupported = true,
-         .lastEntryPrefix = "Sleep Last Entered At:",
+         .lastEntryPrefix = "xo_last_entered_at:",
          .lastEntryTransform = rpmConvertToMs}};
 
     sp<GenericStateResidencyDataProvider> rpmSdp =
-        new GenericStateResidencyDataProvider("/sys/power/rpmh_stats/master_stats");
+        new GenericStateResidencyDataProvider("/sys/kernel/debug/master_stats");
 
     uint32_t apssId = service->addPowerEntity("APSS", PowerEntityType::SUBSYSTEM);
     rpmSdp->addEntity(apssId, PowerEntityConfig("APSS", rpmStateResidencyConfigs));
@@ -85,6 +85,9 @@ int main(int /* argc */, char ** /* argv */) {
     uint32_t cdspId = service->addPowerEntity("CDSP", PowerEntityType::SUBSYSTEM);
     rpmSdp->addEntity(cdspId, PowerEntityConfig("CDSP", rpmStateResidencyConfigs));
 
+    uint32_t tzId = service->addPowerEntity("TZ", PowerEntityType::SUBSYSTEM);
+    rpmSdp->addEntity(tzId, PowerEntityConfig("TZ", rpmStateResidencyConfigs));
+
     service->addStateResidencyDataProvider(rpmSdp);
 
     // Add SoC power entity
@@ -96,8 +99,8 @@ int main(int /* argc */, char ** /* argv */) {
         .lastEntrySupported = false
     };
     std::vector<std::pair<std::string, std::string>> socStateHeaders = {
-        std::make_pair("AOSD", "RPM Mode:aosd"),
-        std::make_pair("CXSD", "RPM Mode:cxsd"),
+        std::make_pair("VLOW", "RPM Mode:vlow"),
+        std::make_pair("VMIN", "RPM Mode:vmin"),
         std::make_pair("DDR", "RPM Mode:ddr"),
     };
 
