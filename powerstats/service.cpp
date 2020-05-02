@@ -71,7 +71,7 @@ int main(int /* argc */, char ** /* argv */) {
          .lastEntryTransform = rpmConvertToMs}};
 
     sp<GenericStateResidencyDataProvider> rpmSdp =
-        new GenericStateResidencyDataProvider("/sys/kernel/debug/master_stats");
+        new GenericStateResidencyDataProvider("/sys/kernel/debug/rpm_master_stats");
 
     uint32_t apssId = service->addPowerEntity("APSS", PowerEntityType::SUBSYSTEM);
     rpmSdp->addEntity(apssId, PowerEntityConfig("APSS", rpmStateResidencyConfigs));
@@ -116,7 +116,7 @@ int main(int /* argc */, char ** /* argv */) {
     // Add WLAN power entity
     uint32_t wlanId = service->addPowerEntity("WLAN", PowerEntityType::SUBSYSTEM);
     sp<WlanStateResidencyDataProvider> wlanSdp =
-            new WlanStateResidencyDataProvider(wlanId, "/sys/kernel/wlan/power_stats");
+            new WlanStateResidencyDataProvider(wlanId, "/sys/kernel/wifi/power_stats");
     service->addStateResidencyDataProvider(wlanSdp);
 
     // Add Power Entities that require the Aidl data provider

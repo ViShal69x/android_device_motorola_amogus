@@ -23,7 +23,7 @@ cc_binary {
         "-Werror",
     ],
     static_libs: [
-        "libpixelpowerstats",
+        "libpixelpowerstats.trinket",
     ],
     shared_libs: [
         "libbase",
