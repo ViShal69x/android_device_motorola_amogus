@@ -123,7 +123,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.lmk.use_minfree_levels=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.madvise-random=true
+    dalvik.vm.madvise-random=true \
+    debug.stagefright.omx_default_rank=0
 
 # Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
