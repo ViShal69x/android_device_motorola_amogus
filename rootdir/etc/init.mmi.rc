@@ -94,7 +94,6 @@ on post-fs
     # Any app with radio UID or oem_5004 GID can read/write/execute files in this dir.
     mkdir /mnt/vendor/persist/public/oma 0775 radio oem_5004
 
-    chown vendor_prod_persist vendor_prod_persist /mnt/product/persist/lifetime/tf_data
     chown oem_5004 oem_5004 /mnt/vendor/persist/factory/fti
     chmod 0664 /mnt/vendor/persist/factory/fti
     chown oem_5004 oem_5004 /mnt/vendor/persist/factory/byte
