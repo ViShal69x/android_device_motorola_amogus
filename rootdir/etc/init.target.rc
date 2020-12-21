@@ -163,17 +163,6 @@ on charger
     setprop vendor.usb.controller 4e00000.dwc3
     setprop sys.usb.configfs 1
 
-on property:vendor.display.lcd_density=640
-   setprop dalvik.vm.heapgrowthlimit 512m
-on property:vendor.display.lcd_density=560
-   setprop dalvik.vm.heapgrowthlimit 256m
-on property:vendor.display.lcd_density=480
-   setprop dalvik.vm.heapgrowthlimit 128m
-on property:vendor.display.lcd_density=240
-   setprop dalvik.vm.heapgrowthlimit 96m
-on property:vendor.display.lcd_density=160
-   setprop dalvik.vm.heapgrowthlimit 96m
-
 ## import cne init file
 #on post-fs
 #    export LD_PRELOAD /vendor/lib/libNimsWrap.so
@@ -323,59 +312,6 @@ service vendor.imsdatadaemon /system/vendor/bin/imsdatadaemon
     group system wifi radio inet log diag
     disabled
 
-#service mdm_helper /system/bin/mdm_helper
-#    class core
-#    onrestart setprop ro.service.mdm_helper_restarted "true"
-#    disabled
-#
-#service mdm_helper_proxy /system/bin/mdm_helper_proxy
-#    class core
-#    disabled
-#
-#service mdm_launcher /system/bin/sh /init.mdm.sh
-#    class main
-#    oneshot
-#
-#service qcamerasvr /system/bin/mm-qcamera-daemon
-#    class late_start
-#    user camera
-#    group camera system inet input graphics
-#
-# Stop mdm_helper_proxy in case of shutdown
-#on property:sys.shutdown.requested=*
-#    stop mdm_helper_proxy
-#
-# Stop mdm_helper_proxy on APQ target
-#on property:ro.radio.noril=yes
-#    stop mdm_helper_proxy
-#
-#on property:persist.airplane.mode.pwr.svg=enabled
-#    setprop ro.mdm_helper_proxy_req false
-#
-#on property:init.svc.ril-daemon=running
-#    setprop ro.mdm_helper_proxy_req true
-#
-## Start mdm_helper_proxy
-#on property:ro.mdm_helper_proxy_req=true
-#    start mdm_helper_proxy
-#
-## QCA1530 SoC core detect
-#service gnss-detect /system/vendor/bin/gnss.qca1530.sh detect
-#   class core
-#   oneshot
-#
-## QCA1530 SoC late_start group trigger
-#service gnss-init /system/vendor/bin/gnss.qca1530.sh init
-#   class late_start
-#   oneshot
-#
-## QCA1530 SoC Service Daemon
-#service gnss-svcd /system/vendor/bin/gnss.qca1530.sh start
-#   class late_start
-#   user root
-#   group gps system qcom_diag diag log inet net_raw
-#   disabled
-
 service vendor.imsrcsservice /system/vendor/bin/imsrcsd
     class main
     user system
@@ -383,16 +319,6 @@ service vendor.imsrcsservice /system/vendor/bin/imsrcsd
 
 on property:vendor.ims.QMI_DAEMON_STATUS=1
     start vendor.imsdatadaemon
-
-on property:vold.decrypt=trigger_restart_framework
-   start vendor.wlan_logging
-
-service vendor.wlan_logging /system/vendor/bin/cnss_diag -q -f -t HELIUM
-   class main
-   user system
-   group system wifi inet sdcard_rw media_rw diag
-   oneshot
-   disabled
 
 service vendor.ims_rtp_daemon /system/vendor/bin/ims_rtp_daemon
    class main
