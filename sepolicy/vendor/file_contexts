@@ -9,6 +9,9 @@
 # Capsense
 /(vendor|system/vendor)/bin/capsense_reset                                 u:object_r:capsense_reset_exec:s0
 
+# Lights
+/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.trinket              u:object_r:hal_light_default_exec:s0
+
 # Root
 /(vendor|system/vendor)/fsg  u:object_r:fsg_firmware_file:s0
 /persist(/*)? u:object_r:mnt_vendor_file:s0

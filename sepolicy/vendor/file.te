@@ -1,1 +1,5 @@
+# MSM Subsys
+type sysfs_msm_subsys, sysfs_type, fs_type;
+
+# Root
 type fsg_firmware_file, file_type, contextmount_type, vendor_file_type;

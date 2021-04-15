@@ -1,0 +1,5 @@
+# MSM Subsys
+genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp u:object_r:sysfs_msm_subsys:s0
+
+# Lights
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-03/1c40000.qcom,spmi:qcom,pmi632@3:qcom,leds@d000/leds/charging u:object_r:sysfs_leds:s0
