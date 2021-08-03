@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=ginna
+DEVICE=rav
 VENDOR=motorola
 
 INITIAL_COPYRIGHT_YEAR=2019

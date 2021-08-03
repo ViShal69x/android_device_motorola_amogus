@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_ginna.mk
+    $(LOCAL_DIR)/lineage_rav.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_ginna-eng \
-    lineage_ginna-user \
-    lineage_ginna-userdebug
+    lineage_rav-eng \
+    lineage_rav-user \
+    lineage_rav-userdebug

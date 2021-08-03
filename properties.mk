@@ -1,5 +1,5 @@
 #
-# props for ginna
+# props for rav
 #
 
 # Audio
@@ -211,7 +211,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.sensors=ginna \
+    ro.hardware.sensors=rav \
     ro.vendor.sensors.amd=false \
     ro.vendor.sensors.facing=false \
     ro.vendor.sensors.glance_approach=false \

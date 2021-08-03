@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=ginna
+DEVICE=rav
 VENDOR=motorola
 
 # Load extract_utils and do some sanity checks

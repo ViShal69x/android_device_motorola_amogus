@@ -74,8 +74,8 @@ PRODUCT_PACKAGES_DEBUG += \
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl.recovery \
-    bootctrl.msm8953 \
-    bootctrl.msm8953.recovery \
+    bootctrl.trinket \
+    bootctrl.trinket.recovery \
     fastbootd
 
 # Audio
@@ -87,7 +87,7 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.2-impl \
     android.hardware.soundtrigger@2.2-service \
     audio.a2dp.default \
-    audio.primary.msm8953 \
+    audio.primary.trinket \
     audio.r_submix.default \
     audio.usb.default \
     libaacwrapper \
@@ -166,10 +166,10 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    copybit.msm8953 \
-    gralloc.msm8953 \
-    hwcomposer.msm8953 \
-    memtrack.msm8953 \
+    copybit.trinket \
+    gralloc.trinket \
+    hwcomposer.trinket \
+    memtrack.trinket \
     libdisplayconfig \
     libgenlock \
     liboverlay \
@@ -263,7 +263,7 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    init.ginna.rc
+    init.rav.rc
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -288,7 +288,7 @@ PRODUCT_COPY_FILES += \
 
 # LED packages
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.msm8953
+    android.hardware.light@2.0-service.trinket
 
 # MotoActions
 PRODUCT_PACKAGES += \
@@ -471,7 +471,7 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    thermal.msm8953 \
+    thermal.trinket \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service
 
@@ -504,7 +504,7 @@ PRODUCT_PACKAGES += \
 # VNDK
 # Update this list with what each blob is actually for
 # libicuuc: vendor.qti.hardware.qteeconnector@1.0-impl
-# libstdc++: camera.msm8953
+# libstdc++: camera.trinket
 PRODUCT_PACKAGES += \
     libicuuc.vendor \
     libstdc++.vendor \
@@ -539,7 +539,4 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libmediaextractorservice
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
-
-$(call inherit-product, vendor/motorola/ginna/ginna-vendor.mk)
+$(call inherit-product, vendor/motorola/rav/rav-vendor.mk)
