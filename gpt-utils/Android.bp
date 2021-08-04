@@ -16,7 +16,7 @@
 
 
 cc_library {
-    name: "libgptutils.motorola_msm8953",
+    name: "libgptutils.trinket",
     vendor: true,
     recovery_available: true,
     shared_libs: [

@@ -15,7 +15,7 @@
 //
 
 cc_library {
-    name: "bootctrl.msm8953",
+    name: "bootctrl.trinket",
     defaults: ["bootctrl_hal_defaults"],
-    static_libs: ["libgptutils.motorola_msm8953"],
+    static_libs: ["libgptutils.trinket"],
 }
