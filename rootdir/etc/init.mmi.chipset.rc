@@ -9,10 +9,10 @@ service fingerprintd /system/bin/fingerprintd
 
 on post-fs
     # Change permission for fingerprint sensor
-    chown system vendor_tcmd /sys/devices/soc/soc:fpc_fpc1020/nav
-    chown system vendor_tcmd /sys/devices/soc/soc:fpc_fpc1020/dev_enable
-    chown system vendor_tcmd /sys/devices/soc/soc:fpc_fpc1020/irq
-    chown system vendor_tcmd /sys/devices/soc/soc:fpc_fpc1020/irq_cnt
+    chown system oem_5004 /sys/devices/soc/soc:fpc_fpc1020/nav
+    chown system oem_5004 /sys/devices/soc/soc:fpc_fpc1020/dev_enable
+    chown system oem_5004 /sys/devices/soc/soc:fpc_fpc1020/irq
+    chown system oem_5004 /sys/devices/soc/soc:fpc_fpc1020/irq_cnt
     chmod 0440 /sys/devices/soc/soc:fpc_fpc1020/irq_cnt
     # MOT_LED_CALIBRATION
     chown cameraserver /mnt/vendor/persist/camera/mot_ledcal
@@ -40,11 +40,11 @@ on boot
     chown system system /sys/class/input/input5/offset
     chmod 0660 /sys/class/input/input5/offset
     # Change ownership and permission for AMPS factory testing
-    chown root vendor_tcmd /sys/devices/soc/a800000.ssusb/modusb_enable
+    chown root oem_5004 /sys/devices/soc/a800000.ssusb/modusb_enable
     chmod 0660 /sys/devices/soc/a800000.ssusb/modusb_enable
-    chown root vendor_tcmd /sys/class/i2c-adapter/i2c-7/7-0072/irq_enable
+    chown root oem_5004 /sys/class/i2c-adapter/i2c-7/7-0072/irq_enable
     chmod 0660 /sys/class/i2c-adapter/i2c-7/7-0072/irq_enable
-    chown root vendor_tcmd /sys/class/i2c-adapter/i2c-7/7-002d/hsic_vdd
+    chown root oem_5004 /sys/class/i2c-adapter/i2c-7/7-002d/hsic_vdd
     chmod 0660 /sys/class/i2c-adapter/i2c-7/7-002d/hsic_vdd
 
 on init

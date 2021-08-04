@@ -76,7 +76,7 @@ on post-fs
     mkdir /mnt/vendor/persist/factory/wlan 0755 oem_5004 oem_5004
     mkdir /mnt/vendor/persist/factory/regulatory 0755 oem_5004 system
     mkdir /mnt/vendor/persist/public 0755 oem_5004 oem_5004
-    mkdir /persist/public/atvc 0770 mot_atvc shell
+    mkdir /persist/public/atvc 0770 oem_5012 shell
     mkdir /mnt/vendor/persist/public/att_dm 0775 radio oem_5004
     mkdir /mnt/vendor/persist/public/hiddenmenu 0775 radio oem_5004
     mkdir /mnt/vendor/persist/public/hiddenmenu/data 0775 system oem_5004

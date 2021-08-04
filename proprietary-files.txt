@@ -1068,8 +1068,8 @@ vendor/lib64/libstagefright_softomx.so
 vendor/lib64/libstagefright_soft_qtiflacdec.so
 
 # Media
--vendor/lib64/libplatformconfig.so
--vendor/lib/libplatformconfig.so
+#-vendor/lib64/libplatformconfig.so
+#-vendor/lib/libplatformconfig.so
 
 # Motorola
 vendor/etc/motorola/firmware/emmc_ffu_15_FE12MB.fw
