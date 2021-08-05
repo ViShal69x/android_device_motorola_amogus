@@ -138,8 +138,12 @@ TARGET_MODULE_ALIASES += \
     usf_dlkm.ko:audio_usf.ko \
     va_macro_dlkm.ko:audio_va_macro.ko \
     wcd934x_dlkm.ko:audio_wcd934x.ko \
+    wcd9355_dlkm.ko:audio_wcd9355.ko \
+    wcd937x_dlkm.ko:audio_wcd937x.ko \
+    wcd937x_slave_dlkm.ko:audio_wcd937x_slave.ko \
     wcd9xxx_dlkm.ko:audio_wcd9xxx.ko \
     wcd_core_dlkm.ko:audio_wcd_core.ko \
+    wcd_cpe_dlkm.ko:audio_wcd_cpe.ko \
     wcd_spi_dlkm.ko:audio_wcd_spi.ko \
     wglink_dlkm.ko:audio_wglink.ko \
     wsa881x_dlkm.ko:audio_wsa881x.ko \
@@ -163,9 +167,13 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 WITH_LINEAGE_CHARGER := false
 
 # Display
+TARGET_SCREEN_DENSITY := 420
+TARGET_USES_DRM_PP := true
 TARGET_USES_HWC2 := true
-TARGET_USES_GRALLOC1 := true
 TARGET_USES_ION := true
+TARGET_USES_COLOR_METADATA := true
+TARGET_USES_DISPLAY_RENDER_INTENTS := true
+TARGET_USES_GRALLOC4 := true
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
@@ -202,7 +210,7 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_rav
 TARGET_RECOVERY_DEVICE_MODULES := libinit_rav
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 service_locator.enable=1 
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 BOARD_BOOT_HEADER_VERSION := 2

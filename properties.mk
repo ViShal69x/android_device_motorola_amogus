@@ -93,7 +93,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Factory reset partition
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.frp.pst=/dev/block/platform/soc/7824900.sdhci/by-name/frp
+    ro.frp.pst=/dev/block/platform/soc/4744000.sdhci/by-name/frp
 
 # FM
 PRODUCT_PROPERTY_OVERRIDES += \
