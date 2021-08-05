@@ -1,3 +1,14 @@
+# Camera
+/(vendor|system/vendor)/bin/vl53l1_daemon               u:object_r:vl53l1_exec:s0
+/dev/laser                                              u:object_r:vl53l1_device:s0
+/data/vendor/misc/imager                                u:object_r:vendor_camera_data_file:s0
+/sys/devices/virtual/input/input[0-9]+/xtalk	        	u:object_r:vendor_sysfs_laser:s0
+/sys/devices/virtual/input/input[0-9]+/offset	        	u:object_r:vendor_sysfs_laser:s0
+/sys/devices/virtual/input/input[0-9]+/calibration_data	u:object_r:vendor_sysfs_laser:s0
 
+# Capsense
+/(vendor|system/vendor)/bin/capsense_reset                                 u:object_r:capsense_reset_exec:s0
+
+# Root
 /(vendor|system/vendor)/fsg  u:object_r:fsg_firmware_file:s0
 /persist(/*)? u:object_r:mnt_vendor_file:s0
