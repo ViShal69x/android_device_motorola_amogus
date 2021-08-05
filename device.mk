@@ -288,7 +288,7 @@ PRODUCT_COPY_FILES += \
 
 # LED packages
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.trinket
+    android.hardware.lights-service.trinket
 
 # MotoActions
 PRODUCT_PACKAGES += \
