@@ -524,7 +524,9 @@ PRODUCT_PACKAGES += \
     WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf \
-    wpa_supplicant_wcn.conf
+    wpa_supplicant_wcn.conf \
+    libkeystore-engine-wifi-hidl \
+    libkeystore-wifi-hidl
 
 # Wi-Fi Display
 PRODUCT_PACKAGES += \
