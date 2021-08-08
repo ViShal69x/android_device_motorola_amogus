@@ -126,7 +126,7 @@ $(EGL_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(EGL_SYMLINK)
 
-WIFI_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/
+WIFI_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/
 $(WIFI_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating WCNSS Symlinks: $@"
 	@rm -rf $@/*
