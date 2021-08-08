@@ -1,9 +1,11 @@
+# ADSP - from 11
+vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
+
 # ADSP
 vendor/bin/adsprpcd
 vendor/bin/dspservice
 vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
-vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib/libadspd.so
 vendor/lib/libadsprpc.so
 vendor/lib/libadsp_default_listener.so
@@ -1313,9 +1315,10 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
 
 # Radio - from 11
 -system_ext/framework/qcom-moto-ims-ext.jar|460d562db70ba436659da6e813bba8848b727aa0
--system_ext/framework/qcom-moto-telephony-ext.jar|e3a6dfce255d6f5dc744814cfe4895572da2e072
+-system_ext/framework/qcom-moto-telephony-ext.jar|9f9378285097e7da36444c40d00d022b4653befb
 -system_ext/framework/qti-telephony-common.jar|f5604c805d69b02c31ee2fa488c538c3edb521d0
--system_ext/priv-app/ims/ims.apk|e4b59d9761cd893ab44d116b10380a728909b41b
+-system_ext/priv-app/ims/ims.apk|dc9211bc0b4c14e103109201ffb625ec6240fef8
+-system/framework/moto-telephony.jar|afda62c76eaf5ab913569ce0c8d9454334b45811
 
 # Radio
 -system_ext/app/atfwd/atfwd.apk

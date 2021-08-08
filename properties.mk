@@ -60,6 +60,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.hfp.client=1 \
     ro.qualcomm.bt.hci_transport=smd \
+    ro.bluetooth.library_name=libbluetooth_qti.so \
     persist.vendor.qcom.bluetooth.enable.splita2dp=false \
     persist.vendor.qcom.bluetooth.soc=cherokee \
     vendor.qcom.bluetooth.soc=cherokee
