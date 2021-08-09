@@ -205,8 +205,7 @@ PRODUCT_PACKAGES += \
     libgeofencing \
     libgnss \
     libgnsspps \
-    libsynergy_loc_api \
-    libwifi-hal-ctrl
+    libsynergy_loc_api
 
 PRODUCT_PACKAGES += \
     apdr.conf \
@@ -505,28 +504,24 @@ PRODUCT_PRODUCT_VNDK_VERSION := current
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
 
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service-lazy \
-    dhcpcd.conf \
+    android.hardware.wifi@1.0-service \
     hostapd \
-    hostapd_cli \
     libnl_2 \
     libnl \
     libqsap_sdk \
-    libQWiFiSoftApCfg \
+    libwifi-hal-ctrl \
     libwifi-hal-qcom \
     libwpa_client \
-    wcnss_service \
-    wificond \
-    wifilogd \
     WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf \
-    wpa_supplicant_wcn.conf \
     libkeystore-engine-wifi-hidl \
-    libkeystore-wifi-hidl
+    libkeystore-wifi-hidl \
+    vendor.qti.hardware.wifi.hostapd@1.1.vendor \
+    vendor.qti.hardware.wifi.supplicant@2.0.vendor
 
 # Wi-Fi Display
 PRODUCT_PACKAGES += \

@@ -824,11 +824,15 @@ vendor/lib/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
+# Fingerprint - from 11
+vendor/bin/init.oem.fingerprint.sh|37c5f84db7cac2fcfafa677fd0eda77d37c35f6d
+
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-ets
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc
 vendor/bin/hw/egis_ident
 vendor/bin/hw/fpc_ident
+vendor/bin/init.oem.fingerprint2.sh
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-ets2.rc
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc
 vendor/etc/init/init.ets.rc
@@ -856,7 +860,6 @@ vendor/firmware/inx_Himax_firmware.bin
 vendor/firmware/inx_hx_criteria.csv
 vendor/firmware/novatek_ts_fw.bin
 vendor/firmware/novatek_ts_mp.bin
-vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
 vendor/firmware/wlan/qca_cld/wlan_mac.bin
 
 # GPS
@@ -1134,6 +1137,9 @@ vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libstagefright_softomx.so
 vendor/lib64/libstagefright_soft_qtiflacdec.so
 
+# Motorola
+vendor/bin/init.oem.hw.sh
+
 # Neural-networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
@@ -1315,11 +1321,11 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.0-adapter-helper.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
 
 # Radio - from 11
--system_ext/framework/qcom-moto-ims-ext.jar|460d562db70ba436659da6e813bba8848b727aa0
--system_ext/framework/qcom-moto-telephony-ext.jar|9f9378285097e7da36444c40d00d022b4653befb
--system_ext/framework/qti-telephony-common.jar|f5604c805d69b02c31ee2fa488c538c3edb521d0
--system_ext/priv-app/ims/ims.apk|dc9211bc0b4c14e103109201ffb625ec6240fef8
--system/framework/moto-telephony.jar|afda62c76eaf5ab913569ce0c8d9454334b45811
+system_ext/framework/qcom-moto-ims-ext.jar|460d562db70ba436659da6e813bba8848b727aa0
+system_ext/framework/qcom-moto-telephony-ext.jar|9f9378285097e7da36444c40d00d022b4653befb
+system_ext/framework/qti-telephony-common.jar|f5604c805d69b02c31ee2fa488c538c3edb521d0
+-system_ext/priv-app/ims/ims.apk;PRESIGNED|dc9211bc0b4c14e103109201ffb625ec6240fef8
+system/framework/moto-telephony.jar|afda62c76eaf5ab913569ce0c8d9454334b45811
 
 # Radio
 -system_ext/app/atfwd/atfwd.apk
@@ -1853,49 +1859,49 @@ vendor/lib/libtime_genoff.so
 vendor/lib64/libtime_genoff.so
 
 # WiFi Display - from nio
--framework/WfdCommon.jar
-vendor/bin/wfdvndservice
-vendor/bin/wifidisplayhalservice
-vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
-vendor/etc/init/wfdvndservice.rc
-vendor/etc/seccomp_policy/wfdhdcphalservice.policy
-vendor/etc/seccomp_policy/wfdvndservice.policy
-vendor/etc/seccomp_policy/wifidisplayhalservice.policy
-vendor/etc/wfdconfig.xml
-vendor/lib/libFileMux_proprietary.so
-vendor/lib/libmmosal.so
-vendor/lib/libmmrtpdecoder_proprietary.so
-vendor/lib/libmmrtpencoder_proprietary.so
-vendor/lib/libwfdcodecv4l2_proprietary.so
-vendor/lib/libwfdcommonutils_proprietary.so
-vendor/lib/libwfdconfigutils_proprietary.so
-vendor/lib/libwfddisplayconfig_proprietary.so
-vendor/lib/libwfdmminterface_proprietary.so
-vendor/lib/libwfdmmservice_proprietary.so
-vendor/lib/libwfdmmsrc_proprietary.so
-vendor/lib/libwfdrtsp_proprietary.so
-vendor/lib/libwfdsessionmodule.so
-vendor/lib/libwfdsourcesession_proprietary.so
-vendor/lib/libwfdsourcesm_proprietary.so
-vendor/lib/libwfduibcinterface_proprietary.so
-vendor/lib/libwfduibcsink_proprietary.so
-vendor/lib/libwfduibcsinkinterface_proprietary.so
-vendor/lib/libwfduibcsrc_proprietary.so
-vendor/lib/libwfduibcsrcinterface_proprietary.so
-vendor/lib/libwfdutils_proprietary.so
-vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
-vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
+-framework/WfdCommon.jar|de1adc7a4adbb117123aa5bb116c5df83c686433
+vendor/bin/wfdvndservice|f61f0c364444e750920f57cb1f1cda3a21b0dbbd
+vendor/bin/wifidisplayhalservice|414bb43e7f93d67d62ee7111ced4e55e065f6d8c
+vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|576ce4393b7746b77a230745aa9e9ee3bd31b17d
+vendor/etc/init/wfdvndservice.rc|42e28fb8e0bf00620d7b9939b5bd3164ca671033
+vendor/etc/seccomp_policy/wfdhdcphalservice.policy|a489ab323be4be2df3de9f84a6b5e6cef924f4c4
+vendor/etc/seccomp_policy/wfdvndservice.policy|b46f0c22a1f9b65c6750205e161c0a3f84ac716b
+vendor/etc/seccomp_policy/wifidisplayhalservice.policy|f113f27e0e301a18baf0ade08c23071a27c7dc52
+vendor/etc/wfdconfig.xml|cb93e272abee13bb6d1c9adb5a4d4650b8ad3d9a
+vendor/lib/libFileMux_proprietary.so|e59edd4604a7c73147118161cab5b7ac6bb16c82
+vendor/lib/libmmosal.so|c083c60e54ed470a445edc73db571c88f7d7966f
+vendor/lib/libmmrtpdecoder_proprietary.so|4e9d5b404ba2455b3e8663f0a91f5b02be18c5fd
+vendor/lib/libmmrtpencoder_proprietary.so|2386d7e84428c7511e896cdaa7f3eed1e68752a3
+vendor/lib/libwfdcodecv4l2_proprietary.so|b022d59ccd22e23ef5f0933cd1ab34b666a48423
+vendor/lib/libwfdcommonutils_proprietary.so|4b71ff7e1994b493cfee47445928f565a169a7e1
+vendor/lib/libwfdconfigutils_proprietary.so|42735a626f862d01d7b3cc8bcb09cf4e931aa2ec
+vendor/lib/libwfddisplayconfig_proprietary.so|5251646759f053e7f02a06ad7ec2cf8083d241e3
+vendor/lib/libwfdmminterface_proprietary.so|3eb3455633d5814a5d7cddb0d95f9d45b7c05db2
+vendor/lib/libwfdmmservice_proprietary.so|c9815a17973f4039cb77d4105d9de04ead8171d7
+vendor/lib/libwfdmmsrc_proprietary.so|979dbbf9505f41cc9e9781aa7e504cfd4c56a42f
+vendor/lib/libwfdrtsp_proprietary.so|180c0e00c549cf56ef71ad5ac0ae123f2e5d9bc1
+vendor/lib/libwfdsessionmodule.so|f68ca1a1340fc44a6a518e985a8e0da063b2ad5b
+vendor/lib/libwfdsourcesession_proprietary.so|a5ae7ba96abc36bfcd265d6a08e6422de1f5328a
+vendor/lib/libwfdsourcesm_proprietary.so|254276c4a90a9875bbd7508332123d4e2e39ec3a
+vendor/lib/libwfduibcinterface_proprietary.so|78da77406a29d342803d108ca25aa55df5ec333c
+vendor/lib/libwfduibcsink_proprietary.so|1fca8e9556d209377c1860b4d829bb71450cfce0
+vendor/lib/libwfduibcsinkinterface_proprietary.so|cb154f66d3d1e27e8acf54af5276d6ef8ccf742a
+vendor/lib/libwfduibcsrc_proprietary.so|31477ada138fd206281318252acba38ed4158eb9
+vendor/lib/libwfduibcsrcinterface_proprietary.so|31eb42e69b21bed4e33f4fd5c900170e6a093c4e
+vendor/lib/libwfdutils_proprietary.so|e803ee7cbc344a13355dd3cf368aa5a625d0d638
+vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so|fdba1b3c11ace4b0415be4e5944cdb288cd35f58
+vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so|044c6cfd4bc603e4aa372ab1a3d287a8d8e5fc48
 
 # WiFi Display (HDCP) - from nio
-vendor/bin/wfdhdcphalservice
-vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc
-vendor/lib/libhdcp1prov.so
-vendor/lib/libhdcp2p2prov.so
-vendor/lib/libhdcpsrm.so
-vendor/lib/libmm-hdcpmgr.so
-vendor/lib/libwfdhdcpcp.so
-vendor/lib/libwfdhdcpservice_proprietary.so
-vendor/lib/libwfdmodulehdcpsession.so
+vendor/bin/wfdhdcphalservice|c7a2d70190d8a90a8ed326af0add5cf7c99d1ab6
+vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc|c266f08783a17f6583e3f22c85e55b0c200442ea
+vendor/lib/libhdcp1prov.so|5e66bd49c63701aa0de150194d721dc5d2aa1ec8
+vendor/lib/libhdcp2p2prov.so|c94f555e041a99bb484806ee4e96465b7ccca13b
+vendor/lib/libhdcpsrm.so|a78240828066f7e83c49e32523afedcca9666700
+vendor/lib/libmm-hdcpmgr.so|0a117357177cb02edcacff0691d5ba207037b228
+vendor/lib/libwfdhdcpcp.so|33fdaf0f2929a99b235379e654efd10273fb7d60
+vendor/lib/libwfdhdcpservice_proprietary.so|9ace45118ede70fa2b8fee55ffb60795d2fa4876
+vendor/lib/libwfdmodulehdcpsession.so|dd50d1091d005e92b662895e20c4ccd2d905c67e
 
 # WiFi
 vendor/bin/cnss-daemon
