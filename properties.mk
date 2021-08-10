@@ -44,6 +44,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.voice.path.for.pcm.voip=false \
     vendor.audio.offload.min.duration.secs=60
 
+PRODUCT_ODM_PROPERTIES += \
+    vendor.audio.feature.fm.enable=true
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.calfile0=/vendor/etc/acdbdata/na/Bluetooth_cal.acdb \
     persist.vendor.audio.calfile1=/vendor/etc/acdbdata/na/General_cal.acdb \
