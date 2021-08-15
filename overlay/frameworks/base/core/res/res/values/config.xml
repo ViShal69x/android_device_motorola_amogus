@@ -454,13 +454,21 @@
          appended after the path string to interpret coordinates in dp instead of px units.
          Note that a physical cutout should be configured in pixels for the best results.
          -->
-    <string name="config_mainBuiltInDisplayCutout">M -42,0 L -42,43 L 42,43 L 42,0 Z</string>
+    <string name="config_mainBuiltInDisplayCutout">
+        M 0, 0
+        H 90
+        V 55
+        H 0
+        L 0, 0
+        @left
+    </string>
 
     <!-- Height of the status bar -->
     <dimen name="config_viewConfigurationTouchSlop">16.0dip</dimen>
     <dimen name="status_bar_height">71.0px</dimen>
     <dimen name="status_bar_height_landscape">24.0dip</dimen>
     <dimen name="status_bar_height_portrait">71.0px</dimen>
+    <dimen name="quick_qs_offset_height">71.0px</dimen>
 
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,

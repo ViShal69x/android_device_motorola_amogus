@@ -18,4 +18,8 @@
 <resources>
     <dimen name="rounded_corner_radius">48.0px</dimen>
     <dimen name="rounded_corner_content_padding">14.0px</dimen>
+    <dimen name="status_bar_padding_top">5dp</dimen>
+    <dimen name="system_icons_keyguard_padding_end">10dp</dimen>
+    <dimen name="keyguard_carrier_text_margin">90.0px</dimen>
+    <dimen name="status_bar_padding_end">10dp</dimen>
 </resources>
