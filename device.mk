@@ -28,6 +28,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Enable updating of APEXes
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Utils
+$(call inherit-product, $(LOCAL_PATH)/utils.mk)
+
+# Include core-utils soong namespace
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/sm8150/codeaurora/core-utils
+
+# Kernel
+LOCAL_KERNEL := device/motorola/rav-kernel/Image.gz
+LOCAL_DTBIMAGE := device/motorola/rav-kernel/dtb.img
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel \
+    $(LOCAL_DTBIMAGE):dtb.img
+
+# Kernel Headers
+PRODUCT_VENDOR_KERNEL_HEADERS := device/motorola/rav-kernel/trinket/kernel-headers
+
 # Properties
 -include $(LOCAL_PATH)/properties.mk
 
@@ -176,6 +193,8 @@ PRODUCT_PACKAGES += \
     libvulkan \
     libtinyxml \
     vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.mapper@1.0.vendor \
+    vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0 \
     vendor.qti.hardware.display.mapper@4.0.vendor
@@ -196,9 +215,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     FM2 \
     libqcomfm_jni \
-    qcom.fmradio
-
-PRODUCT_BOOT_JARS += qcom.fmradio
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -300,6 +316,9 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sysfs
 
 # Media
+PRODUCT_PACKAGES += \
+    libavservices_minijail.vendor
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
@@ -401,7 +420,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.trinket-libperfmgr \
+    android.hardware.power-service \
     android.hardware.power.stats@1.0-service.trinket
 
 PRODUCT_COPY_FILES += \
@@ -450,7 +469,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
-    hardware/google/pixel
+    hardware/google/pixel \
+    hardware/qcom/sm8150 \
+    hardware/qcom/sm8150/display \
+    hardware/qcom/sm8150/gps \
+    hardware/qcom/sm8150/media
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -481,7 +504,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.2-service-qti
+    android.hardware.usb@1.0-service
 
 # Vibrator
 PRODUCT_PACKAGES += \

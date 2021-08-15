@@ -112,7 +112,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.disable_excl_rect=0 \
     vendor.display.comp_mask=0 \
     vendor.display.enable_optimize_refresh=1 \
-    vendor.display.disable_ui_3d_tonemap=1
+    vendor.display.disable_ui_3d_tonemap=1 \
+    debug.sf.hw=0 \
+    debug.egl.hw=0
 
 # Factory reset partition
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -260,7 +262,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.use_color_management=true
 
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.surface_flinger.supports_background_blur=1
+    ro.surface_flinger.supports_background_blur=0
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_phase_offset_ns=1500000 \

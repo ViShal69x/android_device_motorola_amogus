@@ -1,4 +1,4 @@
-#
+
 # Copyright (C) 2017-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_rav.mk
+    $(LOCAL_DIR)/hentai_rav.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_rav-eng \
-    lineage_rav-user \
-    lineage_rav-userdebug
+    hentai_rav-eng \
+    hentai_rav-user \
+    hentai_rav-userdebug

@@ -18,8 +18,22 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+#
+# All components inherited here go to system_ext image
+#
+$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
+
+#
+# All components inherited here go to vendor image
+#
+# TODO(b/136525499): move *_vendor.mk into the vendor makefile later
+$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
+
+# All components inherited here go to product image
+#
+$(call inherit-product, vendor/hentai/build/product/hentai_product.mk)
 
 # Inherit from rav device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -43,7 +57,7 @@ BOARD_USES_RECOVERY_AS_BOOT := false
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := rav
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_NAME := lineage_rav
+PRODUCT_NAME := hentai_rav
 PRODUCT_MODEL := moto g fast
 PRODUCT_SHIPPING_API_LEVEL := 29
 

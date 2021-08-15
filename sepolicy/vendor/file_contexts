@@ -12,6 +12,10 @@
 # Lights
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.trinket              u:object_r:hal_light_default_exec:s0
 
+# Power
+/vendor/bin/hw/android\.hardware\.power-service\.trinket-libperfmgr u:object_r:hal_power_default_exec:s0
+/vendor/bin/hw/android\.hardware\.power\.stats@1\.0-service\.trinket u:object_r:hal_power_stats_default_exec:s0
+
 # Root
 /(vendor|system/vendor)/fsg  u:object_r:fsg_firmware_file:s0
 /persist(/*)? u:object_r:mnt_vendor_file:s0
