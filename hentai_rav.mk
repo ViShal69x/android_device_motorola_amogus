@@ -63,7 +63,7 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
         PRODUCT_NAME=rav \
-        PRIVATE_BUILD_DESC="rav-user 10 QPG30.82-105 80737 release-keys"
+        PRIVATE_BUILD_DESC="rav_retus-user 11 RPJS31.Q1-53-12-5 ae457 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := motorola/rav_retail/rav:10/QPG30.82-105/80737:user/release-keys
+BUILD_FINGERPRINT := motorola/rav_retus/rav:11/RPJS31.Q1-53-12-5/ae457:user/release-keys
