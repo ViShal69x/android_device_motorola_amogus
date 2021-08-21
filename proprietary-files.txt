@@ -851,10 +851,6 @@ vendor/lib64/vendor.egistec.hardware.fingerprint@2.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
 # Firmware
-vendor/firmware/a612_rgmu.bin
-vendor/firmware/a630_gmu.bin
-vendor/firmware/a630_sqe.fw
-vendor/firmware/a640_gmu.bin
 vendor/firmware/focaltech-boe-ft8009-09-0000-rav.bin
 vendor/firmware/focaltech-boev-ft8009-0e-0000-rav.bin
 vendor/firmware/focaltech-dj-ft8009-0b-0000-rav.bin
@@ -974,7 +970,13 @@ vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
-# Graphics
+# Graphics Firmware - from LA.UM.9.11.r1-04500.01-NICOBAR.QSSI12.0
+vendor/firmware/a612_rgmu.bin
+vendor/firmware/a630_gmu.bin
+vendor/firmware/a630_sqe.fw
+vendor/firmware/a640_gmu.bin
+
+# Graphics - from LA.UM.9.11.r1-04500.01-NICOBAR.QSSI12.0
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
