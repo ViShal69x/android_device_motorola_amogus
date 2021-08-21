@@ -35,6 +35,11 @@ $(call inherit-product, $(LOCAL_PATH)/utils.mk)
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/sm8150/codeaurora/core-utils
 
+# vndservicemanager has been removed from API30 devices (aosp/1235751)
+# but we still need it for display services.
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
 # Kernel
 LOCAL_KERNEL := device/motorola/rav-kernel/Image.gz
 LOCAL_DTBIMAGE := device/motorola/rav-kernel/dtb.img
