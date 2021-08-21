@@ -92,34 +92,34 @@ vendor/etc/acdbdata/row/Hdmi_cal.acdb
 vendor/etc/acdbdata/row/Headset_cal.acdb
 vendor/etc/acdbdata/row/Speaker_cal.acdb
 
-# Bluetooth
+# Bluetooth - from flame
+system_ext/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
+system_ext/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/bin/wdsdaemon
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib/hw/audio.bluetooth_qti.default.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib/btaudio_offload_if.so
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib/libbluetooth_audio_session_qti.so
-vendor/lib/libbt-hidlclient.so
-vendor/lib/libbtnv.so
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
+vendor/lib/vendor.qti.hardware.bt_channel_avoidance@1.0.so
 vendor/lib64/btaudio_offload_if.so
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbt-hidlclient.so
 vendor/lib64/libbtnv.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
-vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so
-vendor/lib64/vendor.qti.hardware.btconfigstore@2.0.so
+vendor/lib64/vendor.qti.hardware.bt_channel_avoidance@1.0.so
+
+# Bluetooth (aptX) - from flame
+system_ext/lib64/libaptX_encoder.so
+system_ext/lib64/libaptXHD_encoder.so
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -670,6 +670,7 @@ vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
 # Charger
 vendor/bin/charge_only_mode
 vendor/bin/hvdcp_opti
+vendor/bin/init.qti.chg_policy.sh
 vendor/etc/charger_fstab.qti
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
@@ -1308,7 +1309,7 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
 # Radio - from 11
 system_ext/framework/qcom-moto-ims-ext.jar|460d562db70ba436659da6e813bba8848b727aa0
 system_ext/framework/qcom-moto-telephony-ext.jar|9f9378285097e7da36444c40d00d022b4653befb
-system_ext/framework/qti-telephony-common.jar|f5604c805d69b02c31ee2fa488c538c3edb521d0
+system_ext/framework/qti-telephony-common.jar|02ee9c75d651ca1588d56ae6b292ddc1084296f6
 -system_ext/priv-app/ims/ims.apk;PRESIGNED|dc9211bc0b4c14e103109201ffb625ec6240fef8
 system/framework/moto-telephony.jar|afda62c76eaf5ab913569ce0c8d9454334b45811
 
