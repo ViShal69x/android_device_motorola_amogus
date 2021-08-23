@@ -137,7 +137,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.hwc_set_default_colormode=true \
-    debug.sf.enable_hwc_vds=1 \
+    debug.sf.enable_hwc_vds=0 \
     ro.opengles.version=196610 \
     ro.sf.lcd_density=280 \
     ro.hardware.vulkan=adreno \
