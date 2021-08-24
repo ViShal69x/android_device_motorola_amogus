@@ -9,6 +9,14 @@
 # Capsense
 /(vendor|system/vendor)/bin/capsense_reset                                 u:object_r:capsense_reset_exec:s0
 
+# Charger
+/vendor/bin/charge_only_mode u:object_r:charge_only_exec:s0
+
+# Init Scripts
+/vendor/bin/init.hentai.fingerprint.sh u:object_r:hentai-fingerprint-sh_exec:s0
+/vendor/bin/init.oem.hw.sh u:object_r:oem-hw-sh_exec:s0
+/vendor/bin/init.mmi.touch.sh u:object_r:mmi-touch-sh_exec:s0
+
 # Lights
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.trinket              u:object_r:hal_light_default_exec:s0
 

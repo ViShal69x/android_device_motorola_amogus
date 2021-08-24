@@ -421,3 +421,10 @@ firmware_directories /vendor/firmware_mnt/image/
 # Trustonic TEE device
 /dev/mobicore             0600   system     system
 /dev/mobicore-user        0666   system     system
+
+# Change permission for FPC fingerprint
+/sys/class/fingerprint/fpc1020 nav        0440     system    system
+/sys/class/fingerprint/fpc1020 irq        0440     system    system
+/sys/class/fingerprint/fpc1020 irq_cnt    0440     system    system
+/sys/class/fingerprint/fpc1020 dev_enable 0220     system    system
+/sys/class/fingerprint/fpc1020 vendor     0444     system    system

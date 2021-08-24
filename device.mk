@@ -269,6 +269,7 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.mmi.touch.sh \
     init.mmi.usb.sh \
+    init.hentai.fingerprint.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.sensors.sh \

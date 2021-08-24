@@ -672,6 +672,7 @@ vendor/bin/charge_only_mode
 vendor/bin/hvdcp_opti
 vendor/bin/init.qti.chg_policy.sh
 vendor/etc/charger_fstab.qti
+vendor/etc/init/hw/init.mmi.charge_only.rc
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
 # CryptFSHW
@@ -828,15 +829,11 @@ vendor/lib/vendor.qti.hardware.fm@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
-# Fingerprint - from 11
-vendor/bin/init.oem.fingerprint.sh|37c5f84db7cac2fcfafa677fd0eda77d37c35f6d
-
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-ets
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc
 vendor/bin/hw/egis_ident
 vendor/bin/hw/fpc_ident
-vendor/bin/init.oem.fingerprint2.sh
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-ets2.rc
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc
 vendor/etc/init/init.ets.rc
@@ -1127,6 +1124,7 @@ vendor/lib64/libstagefright_soft_qtiflacdec.so
 
 # Motorola
 vendor/bin/init.oem.hw.sh
+vendor/bin/motobox:vendor/bin/expat
 
 # Neural-networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
