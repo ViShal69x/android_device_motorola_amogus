@@ -93,33 +93,33 @@ vendor/etc/acdbdata/row/Headset_cal.acdb
 vendor/etc/acdbdata/row/Speaker_cal.acdb
 
 # Bluetooth - from flame
-system_ext/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
-system_ext/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
-vendor/bin/wdsdaemon
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib/btaudio_offload_if.so
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
-vendor/lib/libbluetooth_audio_session_qti.so
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so
-vendor/lib/vendor.qti.hardware.bt_channel_avoidance@1.0.so
-vendor/lib64/btaudio_offload_if.so
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
-vendor/lib64/libbluetooth_audio_session_qti.so
-vendor/lib64/libbt-hidlclient.so
-vendor/lib64/libbtnv.so
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
-vendor/lib64/vendor.qti.hardware.bt_channel_avoidance@1.0.so
+system_ext/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so|34c3744fa88bad824344e0d24c70fbcae7509db4
+system_ext/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so|34c3744fa88bad824344e0d24c70fbcae7509db4
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|b46787995bafdfc7ca0ecac1c024f3ea20135c3f
+vendor/bin/wdsdaemon|67f322d4a2703dbcc08a4e91b2f50083ea3352fb
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|d5fcb9c2cf5538b9c946b9263b144e714433a578
+vendor/lib/btaudio_offload_if.so|e784745199e5435b0f23216ddf9c85b64924947d
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|2cc2d29697eecba98fb134f2c7ce00913489ad81
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|d94864def1b53f235d9b7a945240b28ab25b608a
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|20172224cbea63172194b72542396184871b5189
+vendor/lib/libbluetooth_audio_session_qti.so|a46635ea9bb3b6ebc8cfdfabce65f109871a5927
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|9bf68eb1a4928b21688e8a96ce5850e4081506cf
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so|64768811f9eec00185631287a48dc73aff549da7
+vendor/lib/vendor.qti.hardware.bt_channel_avoidance@1.0.so|692f278bea50c74dbd4ce750f2d2f51849b65611
+vendor/lib64/btaudio_offload_if.so|9db0d1897b26a5cd863b80f03b45cf1dc17191cb
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|7bd3308c65c5a0ddf158c1798ab2d4aeee0109d1
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|52406061efa8185ed91261624611b2957d035590
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|9180be49b3f9f00f071b157889f16146a5054f5d
+vendor/lib64/libbluetooth_audio_session_qti.so|90430a61679eb0434b6b6aa6abde57e708b13fbf
+vendor/lib64/libbt-hidlclient.so|586c6341fb01e1c8ae35997b8d5b1963cdcb9334
+vendor/lib64/libbtnv.so|82cc941c6a262e0965925b4955b1ea508b798bfa
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|d7dccf2f3994c6a44f1316949cf882e29b6ba5ea
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|f2d4969eb33ac0204fc286cc72e2a3560ba2413e
+vendor/lib64/vendor.qti.hardware.bt_channel_avoidance@1.0.so|e7cd1a82ac6d77581a4f773ccef16aa74188abf7
 
 # Bluetooth (aptX) - from flame
-system_ext/lib64/libaptX_encoder.so
-system_ext/lib64/libaptXHD_encoder.so
+system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -968,59 +968,59 @@ vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # Graphics Firmware - from LA.UM.9.11.r1-04500.01-NICOBAR.QSSI12.0
-vendor/firmware/a612_rgmu.bin
-vendor/firmware/a630_gmu.bin
-vendor/firmware/a630_sqe.fw
-vendor/firmware/a640_gmu.bin
+vendor/firmware/a612_rgmu.bin|cb8705d5bc417e53863ed16ab0bed2fc1489646f
+vendor/firmware/a630_gmu.bin|32bb4acc7767c47ddb487ed7cb998d465ee462f2
+vendor/firmware/a630_sqe.fw|6526cbb24d614dd67dc18e3c80d5c4374a0b3f63
+vendor/firmware/a640_gmu.bin|fb1eab0dd5f313abf31441e2209c9398da7df98b
 
 # Graphics - from LA.UM.9.11.r1-04500.01-NICOBAR.QSSI12.0
-vendor/lib/egl/eglSubDriverAndroid.so
-vendor/lib/egl/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/hw/vulkan.adreno.so
-vendor/lib/libadreno_app_profiles.so
-vendor/lib/libadreno_utils.so
-vendor/lib/libC2D2.so
-vendor/lib/libc2d30_bltlib.so
-vendor/lib/libCB.so
-vendor/lib/libgpudataproducer.so
-vendor/lib/libgsl.so
-vendor/lib/libhdr_tm.so
-vendor/lib/libllvm-glnext.so
-vendor/lib/libllvm-qcom.so
-vendor/lib/libOpenCL.so
-vendor/lib/libpvr.so
-vendor/lib/libqseed3.so
-vendor/lib/libsdm-color.so
-vendor/lib/libsdm-diag.so
-vendor/lib/libtinyxml2_1.so
-vendor/lib/libVkLayer_q3dtools.so
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so
-vendor/lib64/egl/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/hw/vulkan.adreno.so
-vendor/lib64/libadreno_app_profiles.so
-vendor/lib64/libadreno_utils.so
-vendor/lib64/libC2D2.so
-vendor/lib64/libCB.so
-vendor/lib64/libgpudataproducer.so
-vendor/lib64/libgsl.so
-vendor/lib64/libhdr_tm.so
-vendor/lib64/libllvm-glnext.so
-vendor/lib64/libllvm-qcom.so
-vendor/lib64/libOpenCL.so
-vendor/lib64/libpvr.so
-vendor/lib64/libqseed3.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-diag.so
-vendor/lib64/libtinyxml2_1.so
-vendor/lib64/libVkLayer_q3dtools.so
+vendor/lib/egl/eglSubDriverAndroid.so|76aa917155178a0d7cad84a6daa97a2896199fff
+vendor/lib/egl/libEGL_adreno.so|2dfbb4b7094e2d2805b0a38f93f178fdf3c0dd9f
+vendor/lib/egl/libGLESv1_CM_adreno.so|715f3463528f1e74ffa02627ee5916a09e0748f5
+vendor/lib/egl/libGLESv2_adreno.so|9ec99a74929e865f4a90679e68ae51a9cabbfa8f
+vendor/lib/egl/libq3dtools_adreno.so|9ec9c053592e58be935e8ae5e0a9d362c101773a
+vendor/lib/egl/libq3dtools_esx.so|3fb8d6f1e87f998befe5e557f15f09996d9a1e24
+vendor/lib/hw/vulkan.adreno.so|bd3e41e29839f1521a89a9b949601ba6de110b43
+vendor/lib/libadreno_app_profiles.so|c6907dc5ddcaf7709dc97e2331aa270e02302cb0
+vendor/lib/libadreno_utils.so|d23c7468520b5589c10c15a58c378977a6bd14ec
+vendor/lib/libC2D2.so|91f015cad79024fdbb6a5603cce48693e58a4510
+vendor/lib/libc2d30_bltlib.so|71703a543760e40ba26cde07c2d41416cc9331ec
+vendor/lib/libCB.so|ca3ffe271650abdc776f36a9fa31bf2f1fad5d61
+vendor/lib/libgpudataproducer.so|5fcb41229753b981f7d983a935d07f71114a6354
+vendor/lib/libgsl.so|55d5bc5861b16ba331edb032017922887c182bd6
+vendor/lib/libhdr_tm.so|9bd39324ca84ed0acd479dc8f591e7682024c76a
+vendor/lib/libllvm-glnext.so|c6bee64db1cca4db8aa686e467a1f8c4871eec66
+vendor/lib/libllvm-qcom.so|62ab94343a3f40ec88b9222053aa288a5bd7523c
+vendor/lib/libOpenCL.so|dc0abdc693433601e75a33a245513baa426a57f5
+vendor/lib/libpvr.so|69d5f10b46a963d5f81021b581eeb183de409017
+vendor/lib/libqseed3.so|97d17f5694a845dcdf7e09cb99aa4a01ffc26ecd
+vendor/lib/libsdm-color.so|7a2fff2590efdc55fdf84c6005b1108aa901787f
+vendor/lib/libsdm-diag.so|5696da3008fa6497dd1ce6c8b9333ed4a9157f3a
+vendor/lib/libtinyxml2_1.so|597d471aad4cd5c0cf73bab8bc04bac5ed95ee92
+vendor/lib/libVkLayer_q3dtools.so|152d4cc38815d986ee86efe40e6c090fc2ef70ca
+vendor/lib64/egl/eglSubDriverAndroid.so|404613afbf28e43cf83758d16a2ad2bd8aa61d08
+vendor/lib64/egl/libEGL_adreno.so|8b088629f58e046fc2d67e094d88c1ae39272143
+vendor/lib64/egl/libGLESv1_CM_adreno.so|0a2a648ca2dcd887ea62860bbfa2ef397f01d42d
+vendor/lib64/egl/libGLESv2_adreno.so|8e772aeab3becbf095774efed307d2d84d102902
+vendor/lib64/egl/libq3dtools_adreno.so|189b9c3d400c6a98c87582b8df0910530cba6d44
+vendor/lib64/egl/libq3dtools_esx.so|7afa92ce20ea5ae3e46ff5443bcb829600ac89d2
+vendor/lib64/hw/vulkan.adreno.so|7511d3e45cf28050dcb4dde9b4383a33e12e79d4
+vendor/lib64/libadreno_app_profiles.so|5033f28a269b06ffb5a5b3fe4fb228e4565496b5
+vendor/lib64/libadreno_utils.so|4c889466efbe398860cd385567bb4db07035decd
+vendor/lib64/libC2D2.so|175115cc36fd471f9eb83af76be21b5f602b9460
+vendor/lib64/libCB.so|92fd7f4eb5a5e7bec75a5b944948bee596920d44
+vendor/lib64/libgpudataproducer.so|1e997f1a636cafe233c12cc2c74221708f4a0748
+vendor/lib64/libgsl.so|c0f391d059cc9752b0c047691396fb6f86a34edd
+vendor/lib64/libhdr_tm.so|b4d129efafedbc82e122ef7edff26ca65204b630
+vendor/lib64/libllvm-glnext.so|9f87772dbcd8ac3c53b2232a7f22ebf583b38b53
+vendor/lib64/libllvm-qcom.so|d01061822d1a13066bd6dc9358b76694baa9d389
+vendor/lib64/libOpenCL.so|4f3a9b0eb22699b4a2fa25bd51c3da7842b8ad9c
+vendor/lib64/libpvr.so|9a510d5e99c42e119759c37b48a5d244c2f8e51c
+vendor/lib64/libqseed3.so|7f2a659fb9acd84d79c11dbd6901b816d5d1214f
+vendor/lib64/libsdm-color.so|795d32583dcd6e28ce8793b919e0bbad7332c656
+vendor/lib64/libsdm-diag.so|c21a643ab4ec151e0374df8ce5b839f71d07df90
+vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
+vendor/lib64/libVkLayer_q3dtools.so|6abd9f3c02359b00bd903df27991b41cfbef3581
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
@@ -1309,8 +1309,8 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
 # Radio - from 11
 system_ext/framework/qcom-moto-ims-ext.jar|460d562db70ba436659da6e813bba8848b727aa0
 system_ext/framework/qcom-moto-telephony-ext.jar|9f9378285097e7da36444c40d00d022b4653befb
-system_ext/framework/qti-telephony-common.jar|02ee9c75d651ca1588d56ae6b292ddc1084296f6
--system_ext/priv-app/ims/ims.apk;PRESIGNED|dc9211bc0b4c14e103109201ffb625ec6240fef8
+#system_ext/framework/qti-telephony-common.jar|02ee9c75d651ca1588d56ae6b292ddc1084296f6
+-system_ext/priv-app/ims/ims.apk|dc9211bc0b4c14e103109201ffb625ec6240fef8
 system/framework/moto-telephony.jar|afda62c76eaf5ab913569ce0c8d9454334b45811
 
 # Radio
