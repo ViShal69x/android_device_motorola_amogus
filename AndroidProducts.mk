@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/hentai_rav.mk
+    $(LOCAL_DIR)/hentai_amogus.mk
 
 COMMON_LUNCH_CHOICES := \
-    hentai_rav-eng \
-    hentai_rav-user \
-    hentai_rav-userdebug
+    hentai_amogus-eng \
+    hentai_amogus-user \
+    hentai_amogus-userdebug

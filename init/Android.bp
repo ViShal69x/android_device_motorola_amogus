@@ -15,9 +15,9 @@
 //
 
 cc_library_static {
-    name: "libinit_rav",
+    name: "libinit_amogus",
     recovery_available: true,
-    srcs: ["init_rav.cpp"],
+    srcs: ["init_amogus.cpp"],
     shared_libs: ["libbase"],
     include_dirs: [
         "system/core/base/include",

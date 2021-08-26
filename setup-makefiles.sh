@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=rav
+DEVICE=amogus
 VENDOR=motorola
 
 INITIAL_COPYRIGHT_YEAR=2019

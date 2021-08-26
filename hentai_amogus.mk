@@ -35,7 +35,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 #
 $(call inherit-product, vendor/hentai/build/product/hentai_product.mk)
 
-# Inherit from rav device
+# Inherit from amogus device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -55,15 +55,15 @@ BOARD_BUILD_RETROFIT_DYNAMIC_PARTITIONS_OTA_PACKAGE := false
 BOARD_USES_RECOVERY_AS_BOOT := false
 
 PRODUCT_BRAND := motorola
-PRODUCT_DEVICE := rav
+PRODUCT_DEVICE := amogus
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_NAME := hentai_rav
+PRODUCT_NAME := hentai_amogus
 PRODUCT_MODEL := moto g fast
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-        PRODUCT_NAME=rav \
-        PRIVATE_BUILD_DESC="rav_retus-user 11 RPJS31.Q1-53-12-5 ae457 release-keys"
+        PRODUCT_NAME=amogus \
+        PRIVATE_BUILD_DESC="amogus_retus-user 11 RPJS31.Q1-53-12-5 ae457 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := motorola/rav_retus/rav:11/RPJS31.Q1-53-12-5/ae457:user/release-keys
+BUILD_FINGERPRINT := motorola/amogus_retus/amogus:11/RPJS31.Q1-53-12-5/ae457:user/release-keys

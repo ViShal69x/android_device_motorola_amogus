@@ -41,14 +41,14 @@ PRODUCT_PACKAGES += \
     vndservicemanager
 
 # Kernel
-LOCAL_KERNEL := device/motorola/rav-kernel/Image.gz
-LOCAL_DTBIMAGE := device/motorola/rav-kernel/dtb.img
+LOCAL_KERNEL := device/motorola/amogus-kernel/Image.gz
+LOCAL_DTBIMAGE := device/motorola/amogus-kernel/dtb.img
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
     $(LOCAL_DTBIMAGE):dtb.img
 
 # Kernel Headers
-PRODUCT_VENDOR_KERNEL_HEADERS := device/motorola/rav-kernel/trinket/kernel-headers
+PRODUCT_VENDOR_KERNEL_HEADERS := device/motorola/amogus-kernel/trinket/kernel-headers
 
 # Properties
 -include $(LOCAL_PATH)/properties.mk
@@ -287,7 +287,7 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    init.rav.rc
+    init.amogus.rc
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -580,4 +580,4 @@ PRODUCT_PACKAGES += \
     libmediaextractorservice \
     libwfdaac_vendor
 
-$(call inherit-product, vendor/motorola/rav/rav-vendor.mk)
+$(call inherit-product, vendor/motorola/amogus/amogus-vendor.mk)

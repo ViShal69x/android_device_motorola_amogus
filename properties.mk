@@ -1,5 +1,5 @@
 #
-# props for rav
+# props for amogus
 #
 
 # Audio
@@ -236,7 +236,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.sensors=rav \
+    ro.hardware.sensors=amogus \
     ro.vendor.sensors.amd=false \
     ro.vendor.sensors.facing=false \
     ro.vendor.sensors.glance_approach=false \

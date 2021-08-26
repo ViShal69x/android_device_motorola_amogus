@@ -22,7 +22,7 @@
 # definition file).
 #
 
-DEVICE_PATH := device/motorola/rav
+DEVICE_PATH := device/motorola/amogus
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
@@ -157,8 +157,8 @@ TARGET_FS_CONFIG_GEN += \
     $(DEVICE_PATH)/mot_aids.fs
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_rav
-TARGET_RECOVERY_DEVICE_MODULES := libinit_rav
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_amogus
+TARGET_RECOVERY_DEVICE_MODULES := libinit_amogus
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=tty0 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 service_locator.enable=1 
@@ -182,7 +182,7 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-BOARD_PREBUILT_DTBOIMAGE := device/motorola/rav-kernel/dtbo.img
+BOARD_PREBUILT_DTBOIMAGE := device/motorola/amogus-kernel/dtbo.img
 
 # HOLY CTS LORDS - Don't patch plz google
 BOARD_KERNEL_CMDLINE += androidboot.verifiedbootstate=green androidboot.vbmeta.device_state=locked
@@ -190,7 +190,7 @@ BOARD_KERNEL_CMDLINE += androidboot.verifiedbootstate=green androidboot.vbmeta.d
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES += \
-    $(wildcard device/motorola/rav-kernel/*.ko)
+    $(wildcard device/motorola/amogus-kernel/*.ko)
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
