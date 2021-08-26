@@ -286,12 +286,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.zram.mark_idle_delay_mins=60 \
     ro.zram.first_wb_delay_mins=180 \
     ro.zram.periodic_wb_delay_hours=24
-
-# Fingerprint
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.build.fingerprint="google/redfin/redfin:11/RQ1D.210105.003/7005430:user/release-keys" \
-    ro.product.brand=google \
-    ro.product.device=redfin \
-    ro.product.manufacturer=Google \
-    ro.product.model=Pixel 5 \
-    ro.product.name=redfin

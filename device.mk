@@ -441,6 +441,9 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service \
     android.hardware.power.stats@1.0-service.trinket
 
+# Product Prop
+TARGET_PRODUCT_PROP := $(LOCAL_PATH)/product.prop
+
 # QCOM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/system_ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml \
