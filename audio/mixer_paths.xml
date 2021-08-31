@@ -89,6 +89,10 @@
 	<ctl name="PRIM_MI2S_RX Format" value="S16_LE" />
 	<!-- smart amplifier end -->
 
+	<!-- electimon mods start -->
+	<ctl name="RX_CDC_DMA_RX_0 Format" value="S24_LE" />
+	<!-- electimon mods end -->
+
 	<ctl name="AFE_PCM_RX_Voice Mixer VoiceMMode1" value="0" />
 	<ctl name="AFE_PCM_RX_Voice Mixer VoiceMMode2" value="0" />
 	<ctl name="AUX_PCM_RX_Voice Mixer VoiceMMode1" value="0" />
@@ -303,6 +307,16 @@
 	<ctl name="MultiMedia8 Mixer SLIM_7_TX" value="0" />
 	<ctl name="MultiMedia8 Mixer AFE_PCM_TX" value="0" />
 	<!-- audio record compress end-->
+
+        <path name="hph-highquality-mode">
+            <ctl name="RX_HPH_PWR_MODE" value="LOHIFI" />
+            <ctl name="RX HPH Mode" value="CLS_H_LOHIFI" />
+        </path>
+
+        <path name="hph-lowpower-mode">
+            <ctl name="RX_HPH_PWR_MODE" value="ULP" />
+            <ctl name="RX HPH Mode" value="CLS_H_ULP" />
+        </path>
 
 	<path name="set-capture-format-default">
 	</path>

@@ -40,7 +40,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.use.sw.alac.decoder=true \
     vendor.audio.use.sw.ape.decoder=true \
     vendor.voice.path.for.pcm.voip=false \
-    vendor.audio.offload.min.duration.secs=60
+    vendor.audio.offload.min.duration.secs=60 \
+    persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 
 PRODUCT_ODM_PROPERTIES += \
     vendor.audio.feature.fm.enable=true
