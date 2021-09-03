@@ -359,6 +359,10 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
+# NeuralNetworks
+PRODUCT_PACKAGES += \
+    libtensorflowlite_jni
+
 # NoCutoutOverlay
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
