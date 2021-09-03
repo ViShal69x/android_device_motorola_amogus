@@ -74,23 +74,25 @@ vendor/lib64/libaudioparsers.so
 vendor/lib64/libqtigef.so
 
 # Audio-ACDB
-vendor/etc/acdbdata/adsp_avs_config.acdb
-vendor/etc/acdbdata/na/Bluetooth_cal.acdb
-vendor/etc/acdbdata/na/Codec_cal.acdb
-vendor/etc/acdbdata/na/General_cal.acdb
-vendor/etc/acdbdata/na/Global_cal.acdb
-vendor/etc/acdbdata/na/Handset_cal.acdb
-vendor/etc/acdbdata/na/Hdmi_cal.acdb
-vendor/etc/acdbdata/na/Headset_cal.acdb
-vendor/etc/acdbdata/na/Speaker_cal.acdb
-vendor/etc/acdbdata/row/Bluetooth_cal.acdb
-vendor/etc/acdbdata/row/Codec_cal.acdb
-vendor/etc/acdbdata/row/General_cal.acdb
-vendor/etc/acdbdata/row/Global_cal.acdb
-vendor/etc/acdbdata/row/Handset_cal.acdb
-vendor/etc/acdbdata/row/Hdmi_cal.acdb
-vendor/etc/acdbdata/row/Headset_cal.acdb
-vendor/etc/acdbdata/row/Speaker_cal.acdb
+#vendor/etc/acdbdata/adsp_avs_config.acdb
+vendor/etc/acdbdata/na/Bluetooth_cal.acdb:vendor/etc/acdbdata/rav/Bluetooth_cal.acdb
+vendor/etc/acdbdata/na/Codec_cal.acdb:vendor/etc/acdbdata/rav/Codec_cal.acdb
+vendor/etc/acdbdata/na/General_cal.acdb:vendor/etc/acdbdata/rav/General_cal.acdb
+vendor/etc/acdbdata/na/Global_cal.acdb:vendor/etc/acdbdata/rav/Global_cal.acdb
+vendor/etc/acdbdata/na/Handset_cal.acdb:vendor/etc/acdbdata/rav/Handset_cal.acdb
+vendor/etc/acdbdata/na/Hdmi_cal.acdb:vendor/etc/acdbdata/rav/Hdmi_cal.acdb
+vendor/etc/acdbdata/na/Headset_cal.acdb:vendor/etc/acdbdata/rav/Headset_cal.acdb
+vendor/etc/acdbdata/na/Speaker_cal.acdb:vendor/etc/acdbdata/rav/Speaker_cal.acdb
+
+# Audio-ACDB - from sofia
+vendor/etc/acdbdata/Bluetooth_cal.acdb:vendor/etc/acdbdata/sofia/Bluetooth_cal.acdb
+vendor/etc/acdbdata/Codec_cal.acdb:vendor/etc/acdbdata/sofia/Codec_cal.acdb
+vendor/etc/acdbdata/General_cal.acdb:vendor/etc/acdbdata/sofia/General_cal.acdb
+vendor/etc/acdbdata/Global_cal.acdb:vendor/etc/acdbdata/sofia/Global_cal.acdb
+vendor/etc/acdbdata/Handset_cal.acdb:vendor/etc/acdbdata/sofia/Handset_cal.acdb
+vendor/etc/acdbdata/Hdmi_cal.acdb:vendor/etc/acdbdata/sofia/Hdmi_cal.acdb
+vendor/etc/acdbdata/Headset_cal.acdb:vendor/etc/acdbdata/sofia/Headset_cal.acdb
+vendor/etc/acdbdata/Speaker_cal.acdb:vendor/etc/acdbdata/sofia/Speaker_cal.acdb
 
 # Bluetooth - from flame
 system_ext/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so|34c3744fa88bad824344e0d24c70fbcae7509db4

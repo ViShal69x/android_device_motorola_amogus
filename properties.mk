@@ -46,15 +46,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_ODM_PROPERTIES += \
     vendor.audio.feature.fm.enable=true
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.audio.calfile0=/vendor/etc/acdbdata/na/Bluetooth_cal.acdb \
-    persist.vendor.audio.calfile1=/vendor/etc/acdbdata/na/General_cal.acdb \
-    persist.vendor.audio.calfile2=/vendor/etc/acdbdata/na/Global_cal.acdb \
-    persist.vendor.audio.calfile3=/vendor/etc/acdbdata/na/Handset_cal.acdb \
-    persist.vendor.audio.calfile4=/vendor/etc/acdbdata/na/Hdmi_cal.acdb \
-    persist.vendor.audio.calfile5=/vendor/etc/acdbdata/na/Headset_cal.acdb \
-    persist.vendor.audio.calfile6=/vendor/etc/acdbdata/na/Speaker_cal.acdb
-
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     use.voice.path.for.pcm.voip=false
 
