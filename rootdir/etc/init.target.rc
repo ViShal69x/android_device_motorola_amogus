@@ -51,6 +51,8 @@ on early-fs
 
 on fs
     mount_all /vendor/etc/fstab.qcom --early
+    setprop sys.usb.config adb
+    start adbd
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
     restorecon_recursive /mnt/vendor/persist
