@@ -135,7 +135,6 @@
 	<ctl name="EAR_RDAC Switch" value="0" />
 	<ctl name="HPHL_RDAC Switch" value="0" />
 	<ctl name="HPHR_RDAC Switch" value="0" />
-	<ctl name="RDAC3_MUX" value="ZERO" />
 	<ctl name="RX_EAR Mode" value="OFF" />
 	<ctl name="Voice HAC Switch" value="Disable" />
 
