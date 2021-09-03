@@ -85,14 +85,14 @@ vendor/etc/acdbdata/na/Headset_cal.acdb:vendor/etc/acdbdata/rav/Headset_cal.acdb
 vendor/etc/acdbdata/na/Speaker_cal.acdb:vendor/etc/acdbdata/rav/Speaker_cal.acdb
 
 # Audio-ACDB - from sofia
-vendor/etc/acdbdata/Bluetooth_cal.acdb:vendor/etc/acdbdata/sofia/Bluetooth_cal.acdb
-vendor/etc/acdbdata/Codec_cal.acdb:vendor/etc/acdbdata/sofia/Codec_cal.acdb
-vendor/etc/acdbdata/General_cal.acdb:vendor/etc/acdbdata/sofia/General_cal.acdb
-vendor/etc/acdbdata/Global_cal.acdb:vendor/etc/acdbdata/sofia/Global_cal.acdb
-vendor/etc/acdbdata/Handset_cal.acdb:vendor/etc/acdbdata/sofia/Handset_cal.acdb
-vendor/etc/acdbdata/Hdmi_cal.acdb:vendor/etc/acdbdata/sofia/Hdmi_cal.acdb
-vendor/etc/acdbdata/Headset_cal.acdb:vendor/etc/acdbdata/sofia/Headset_cal.acdb
-vendor/etc/acdbdata/Speaker_cal.acdb:vendor/etc/acdbdata/sofia/Speaker_cal.acdb
+vendor/etc/acdbdata/Bluetooth_cal.acdb:vendor/etc/acdbdata/sofia/Bluetooth_cal.acdb|8082b9f931ce7816452a3055211a7a33dc321ba1
+vendor/etc/acdbdata/Codec_cal.acdb:vendor/etc/acdbdata/sofia/Codec_cal.acdb|6219501ad6e5e7d95eeac0b52c87fbf0e865a6b1
+vendor/etc/acdbdata/General_cal.acdb:vendor/etc/acdbdata/sofia/General_cal.acdb|99b3c58a7778f4643a46ec605a28e4767da3ace4
+vendor/etc/acdbdata/Global_cal.acdb:vendor/etc/acdbdata/sofia/Global_cal.acdb|81e4ac26bd7cedc77f22079352f0f5d5289d2d29
+vendor/etc/acdbdata/Handset_cal.acdb:vendor/etc/acdbdata/sofia/Handset_cal.acdb|165b5994a67a056b62600cf4c3f5a783eb3ffe29
+vendor/etc/acdbdata/Hdmi_cal.acdb:vendor/etc/acdbdata/sofia/Hdmi_cal.acdb|11ee4bff2d334f52048349ce2b760202c1ceacb9
+vendor/etc/acdbdata/Headset_cal.acdb:vendor/etc/acdbdata/sofia/Headset_cal.acdb|dd9bf2463efddefdd9d11693932d0405362dc960
+vendor/etc/acdbdata/Speaker_cal.acdb:vendor/etc/acdbdata/sofia/Speaker_cal.acdb|54976237d9bb54f00be9a2be99ac0c7e35cd22ad
 
 # Bluetooth - from flame
 system_ext/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so|34c3744fa88bad824344e0d24c70fbcae7509db4
@@ -850,10 +850,10 @@ vendor/lib64/vendor.egistec.hardware.fingerprint@2.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
 # Firmware - from not rav
-vendor/firmware/focaltech-auo-ft8756-0b-01-sofiap.bin
-vendor/firmware/focaltech-ft8756-0d-01-sofiar.bin
-vendor/firmware/focaltech-tianma-ft8756-0b-01-sofia.bin
-vendor/firmware/focaltech-tianma-ft8756-11-01-sofiap.bin
+vendor/firmware/focaltech-auo-ft8756-0b-01-sofiap.bin|cba7d733d1d180f61782decd70614a2d70a159b5
+vendor/firmware/focaltech-ft8756-0d-01-sofiar.bin|86e4e27df19036a03c1ca5029cc60bcd599d3c10
+vendor/firmware/focaltech-tianma-ft8756-0b-01-sofia.bin|2ef1231698533ae0c819c1c480317945c677512b
+vendor/firmware/focaltech-tianma-ft8756-11-01-sofiap.bin|b9d2e0981acda0a377e5e5fb389224c876f6dfe5
 
 # Firmware
 vendor/firmware/focaltech-boe-ft8009-09-0000-rav.bin
