@@ -847,6 +847,12 @@ vendor/lib64/libets_teeclient.so
 vendor/lib64/vendor.egistec.hardware.fingerprint@2.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
+# Firmware - from not rav
+vendor/firmware/focaltech-auo-ft8756-0b-01-sofiap.bin
+vendor/firmware/focaltech-ft8756-0d-01-sofiar.bin
+vendor/firmware/focaltech-tianma-ft8756-0b-01-sofia.bin
+vendor/firmware/focaltech-tianma-ft8756-11-01-sofiap.bin
+
 # Firmware
 vendor/firmware/focaltech-boe-ft8009-09-0000-rav.bin
 vendor/firmware/focaltech-boev-ft8009-0e-0000-rav.bin
