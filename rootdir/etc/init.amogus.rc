@@ -7,28 +7,18 @@ on property:ro.boot.device=rav
     setprop persist.vendor.audio.calfile4 /vendor/etc/acdbdata/rav/Hdmi_cal.acdb
     setprop persist.vendor.audio.calfile5 /vendor/etc/acdbdata/rav/Headset_cal.acdb
     setprop persist.vendor.audio.calfile6 /vendor/etc/acdbdata/rav/Speaker_cal.acdb
+    mount none /vendor/etc/sensors/config-rav /vendor/etc/sensors/config bind
 
 on property:ro.boot.device=sofia
-    setprop ro.boot.product.vendor.sku sofia
-    setprop persist.vendor.audio.calfile0 /vendor/etc/acdbdata/sofia/Bluetooth_cal.acdb
-    setprop persist.vendor.audio.calfile1 /vendor/etc/acdbdata/sofia/General_cal.acdb
-    setprop persist.vendor.audio.calfile2 /vendor/etc/acdbdata/sofia/Global_cal.acdb
-    setprop persist.vendor.audio.calfile3 /vendor/etc/acdbdata/sofia/Handset_cal.acdb
-    setprop persist.vendor.audio.calfile4 /vendor/etc/acdbdata/sofia/Hdmi_cal.acdb
-    setprop persist.vendor.audio.calfile5 /vendor/etc/acdbdata/sofia/Headset_cal.acdb
-    setprop persist.vendor.audio.calfile6 /vendor/etc/acdbdata/sofia/Speaker_cal.acdb
+    trigger sofia-device
 
 on property:ro.boot.device=sofiap
-    setprop ro.boot.product.vendor.sku sofia
-    setprop persist.vendor.audio.calfile0 /vendor/etc/acdbdata/sofia/Bluetooth_cal.acdb
-    setprop persist.vendor.audio.calfile1 /vendor/etc/acdbdata/sofia/General_cal.acdb
-    setprop persist.vendor.audio.calfile2 /vendor/etc/acdbdata/sofia/Global_cal.acdb
-    setprop persist.vendor.audio.calfile3 /vendor/etc/acdbdata/sofia/Handset_cal.acdb
-    setprop persist.vendor.audio.calfile4 /vendor/etc/acdbdata/sofia/Hdmi_cal.acdb
-    setprop persist.vendor.audio.calfile5 /vendor/etc/acdbdata/sofia/Headset_cal.acdb
-    setprop persist.vendor.audio.calfile6 /vendor/etc/acdbdata/sofia/Speaker_cal.acdb
+    trigger sofia-device
 
 on property:ro.boot.device=sofiar
+    trigger sofia-device
+
+on sofia-device
     setprop ro.boot.product.vendor.sku sofia
     setprop persist.vendor.audio.calfile0 /vendor/etc/acdbdata/sofia/Bluetooth_cal.acdb
     setprop persist.vendor.audio.calfile1 /vendor/etc/acdbdata/sofia/General_cal.acdb
@@ -37,4 +27,4 @@ on property:ro.boot.device=sofiar
     setprop persist.vendor.audio.calfile4 /vendor/etc/acdbdata/sofia/Hdmi_cal.acdb
     setprop persist.vendor.audio.calfile5 /vendor/etc/acdbdata/sofia/Headset_cal.acdb
     setprop persist.vendor.audio.calfile6 /vendor/etc/acdbdata/sofia/Speaker_cal.acdb
-
+    mount none /vendor/etc/sensors/config-sofia /vendor/etc/sensors/config bind
