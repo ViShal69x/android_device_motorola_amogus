@@ -54,6 +54,18 @@ PRODUCT_VENDOR_KERNEL_HEADERS := device/motorola/amogus-kernel/trinket/kernel-he
 -include $(LOCAL_PATH)/properties.mk
 
 # Overlays
+PRODUCT_PACKAGES += \
+    ravFrameworkOverlay \
+    sofiaFrameworkOverlay \
+    sofiapFrameworkOverlay \
+    sofiapSFrameworkOverlay \
+    sofiarFrameworkOverlay \
+    ravSystemUIOverlay \
+    sofiaSystemUIOverlay \
+    sofiapSystemUIOverlay \
+    sofiapSSystemUIOverlay \
+    sofiarSystemUIOverlay
+
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
