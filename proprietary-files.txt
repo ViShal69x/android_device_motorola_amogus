@@ -850,10 +850,24 @@ vendor/lib64/vendor.egistec.hardware.fingerprint@2.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
 # Firmware - from not rav
+vendor/firmware/crus_sp_rx0.bin|92e92e8bacfe47684a0847c0821ca92dff56c817
+vendor/firmware/crus_sp_rx1.bin|ebcad6a5ce5606eaf3fb59c08dfa89b512b6f5cf
+vendor/firmware/crus_sp_rx2.bin|deeb90461ce947d4c4c4610c443abc98e67474e7
+vendor/firmware/crus_sp_rx3.bin|deeb90461ce947d4c4c4610c443abc98e67474e7
+vendor/firmware/cs35l41-dsp1-diag.wmfw|f86f49bf319d6c243401fa2c81fc5b912fac681e
+vendor/firmware/cs35l41-dsp1-prot.wmfw|c9b2c92868f77d659b53e00c2ec5712a745e5d97
+vendor/firmware/cs35l41-dsp1-rcv-cali.bin|ddec65aadbb37c2166524176e67e483a7b348b10
+vendor/firmware/cs35l41-dsp1-rcv-prot.bin|ec9a25c1e2d45ddcb5d3ab35ad73f0257eb3825b
+vendor/firmware/cs35l41-dsp1-spk-cali.bin|11b6a60fc5e4036b8a6458813b922c3ea65e7802
+vendor/firmware/cs35l41-dsp1-spk-prot.bin|b4443c7d7ec6543b641c650fd4918cc64e0c6cd8
 vendor/firmware/focaltech-auo-ft8756-0b-01-sofiap.bin|cba7d733d1d180f61782decd70614a2d70a159b5
 vendor/firmware/focaltech-ft8756-0d-01-sofiar.bin|86e4e27df19036a03c1ca5029cc60bcd599d3c10
 vendor/firmware/focaltech-tianma-ft8756-0b-01-sofia.bin|2ef1231698533ae0c819c1c480317945c677512b
 vendor/firmware/focaltech-tianma-ft8756-11-01-sofiap.bin|b9d2e0981acda0a377e5e5fb389224c876f6dfe5
+vendor/firmware/rcv_fast_switch1.txt|58b264a7918b5379c1753d6dd5441611394d4e97
+vendor/firmware/rcv_fast_switch2.txt|a9e8d02079109dcb0fe41a37a2e1ac8a599cd816
+vendor/firmware/spk_fast_switch1.txt|58b264a7918b5379c1753d6dd5441611394d4e97
+vendor/firmware/spk_fast_switch2.txt|a9e8d02079109dcb0fe41a37a2e1ac8a599cd816
 
 # Firmware
 vendor/firmware/focaltech-boe-ft8009-09-0000-rav.bin
