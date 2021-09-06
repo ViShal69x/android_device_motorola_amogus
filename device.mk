@@ -296,7 +296,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sensors.sh \
     init.qcom.sh \
     init.qti.qseecomd.sh \
-    init.amogus.rc \
+    init.amogus.sh \
     init.hidl.sensor.rc \
     init.mmi.chipset.rc \
     init.mmi.overlay.rc \

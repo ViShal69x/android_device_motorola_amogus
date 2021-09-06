@@ -27,7 +27,6 @@
 #
 #
 
-import /vendor/etc/init/hw/init.amogus.rc
 import /vendor/etc/init/hw/init.mmi.rc
 
 on early-init
@@ -371,3 +370,8 @@ service smcinvoked /system/bin/smcinvoked
     class main
     user system
     group system
+
+service vendor.amogus /vendor/bin/init.amogus.sh
+    class core
+    user root
+    oneshot
