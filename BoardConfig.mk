@@ -160,8 +160,8 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_amogus
 TARGET_RECOVERY_DEVICE_MODULES := libinit_amogus
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=tty0 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 service_locator.enable=1 
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=tty0 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 service_locator.enable=1
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive reboot_panic=warm
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_BASE          := 0x00000000
