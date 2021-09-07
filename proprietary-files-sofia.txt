@@ -47,7 +47,13 @@ vendor/lib/libchromatix_mot_ov16e10_row_3a_zsl_video.so|77357ac89f6673a86ec0daaa
 vendor/lib/libchromatix_mot_ov16e10_row_cpp_snapshot_downscale.so|e29805c704fa281fda63e1524300355cc448d7bd
 vendor/lib/libchromatix_mot_ov16e10_row_cpp_video.so|04dfe1047308d2aa4b2e309116bf0ec5bc93fc4d
 
+# Firmware - from sofiar
+vendor/firmware/aw8624_haptic.bin|42f7498f3869cf3138b50138739d29a5349d0ba4
+vendor/firmware/aw8624_rtp.bin|3c06255839cd1884e8d9826952e9bfc7842dc671
+
 # Firmware - from sofia
+vendor/firmware/aw8695_haptic.bin|d1ac7454ddd7de45e648af0c8600307a676cd943
+vendor/firmware/aw8695_rtp.bin|3c06255839cd1884e8d9826952e9bfc7842dc671
 vendor/firmware/crus_sp_rx0.bin|92e92e8bacfe47684a0847c0821ca92dff56c817
 vendor/firmware/crus_sp_rx1.bin|ebcad6a5ce5606eaf3fb59c08dfa89b512b6f5cf
 vendor/firmware/crus_sp_rx2.bin|deeb90461ce947d4c4c4610c443abc98e67474e7
