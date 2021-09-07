@@ -13,6 +13,7 @@ rav()
     setprop persist.vendor.audio.calfile5 /vendor/etc/acdbdata/rav/Headset_cal.acdb
     setprop persist.vendor.audio.calfile6 /vendor/etc/acdbdata/rav/Speaker_cal.acdb
     mount -o bind /vendor/etc/sensors/config-rav /vendor/etc/sensors/config
+    setprop persist.vendor.camera.customer.config camera_config_rav.xml
 }
 sofia()
 {
@@ -25,20 +26,20 @@ sofia()
     setprop persist.vendor.audio.calfile4 /vendor/etc/acdbdata/sofia/Hdmi_cal.acdb
     setprop persist.vendor.audio.calfile5 /vendor/etc/acdbdata/sofia/Headset_cal.acdb
     setprop persist.vendor.audio.calfile6 /vendor/etc/acdbdata/sofia/Speaker_cal.acdb
+    setprop persist.vendor.camera.customer.config camera_config_sofia.xml
     mount -o bind /vendor/etc/sensors/config-sofia /vendor/etc/sensors/config
-    mount -o bind /vendor/etc/camera/camera_config_sofia.xml /vendor/etc/camera/camera_config.xml
     mount -o bind /vendor/etc/camera/dual_golden_sofia.bin /vendor/etc/camera/dual_golden.bin
     mount -o bind /vendor/lib/libmmcamera_mot_ov02a_sofia.so /vendor/lib/libmmcamera_mot_ov02a.so
     moutn -o bind /vendor/lib/libmmcamera_mot_s5k4h7_sofia.so /vendor/lib/libmmcamera_mot_s5k4h7.so
 }
 sofiap()
 {
-    mount -o bind /vendor/etc/camera/camera_config_sofiap.xml /vendor/etc/camera/camera_config.xml
+    setprop persist.vendor.camera.customer.config camera_config_sofiap.xml
 }
 sofiar()
 {
-    mount -o bind /vendor/etc/camera/camera_config_sofiar.xml /vendor/etc/camera/camera_config.xml
     mount -o bind /vendor/etc/camera/dual_golden_sofiar.bin /vendor/etc/camera/dual_golden.bin
+    setprop persist.vendor.camera.customer.config camera_config_sofiar.xml
 }
 
 case "$device" in

@@ -13,10 +13,9 @@ vendor/etc/camera/dual_golden.bin:vendor/etc/camera/dual_golden_sofia.bin|2240f8
 vendor/etc/camera/camera_config.xml:vendor/etc/camera/camera_config_sofia.xml|010fbfa79a7abcb0b2c64f8ee27fcb3869eb5eeb
 vendor/etc/camera/mot_ov16a1q_chromatix.xml|7268f6419721eb4b35154282dc7ff183ccff9c11
 vendor/etc/camera/mot_ov16e10_chromatix.xml|4615e1987543cb4f869b82a26976ea3f2b209e23
-vendor/lib/libmmcamera_mot_ov02a.so:vendor/lib/libmmcamera_mot_ov02a_sofia.so|277d8cf77b3c681a4dc2ee670f703baf21296799
-vendor/lib/libmmcamera_mot_ov16a1q_eeprom.so|d05d7d8e2cc87630c1ca35eaadaeac7bcc4c96f1
+vendor/lib/libmmcamera_mot_ov02a.so|277d8cf77b3c681a4dc2ee670f703baf21296799
 vendor/lib/libmmcamera_mot_ov16a1q.so|e4e6f46b2461115c336325c19eb8c2cdce21ddf5
-vendor/lib/libmmcamera_mot_s5k4h7.so:vendor/lib/libmmcamera_mot_s5k4h7_sofia.so|2a6e9fe7fb059e7c970e791fd3e5dcd11932910f
+vendor/lib/libmmcamera_mot_s5k4h7.so|2a6e9fe7fb059e7c970e791fd3e5dcd11932910f
 
 # Camera-configs - from sofiap 10
 vendor/etc/camera/camera_config.xml:vendor/etc/camera/camera_config_sofiap.xml|965f85e14912e1db4ca9e023031153fbde12c509

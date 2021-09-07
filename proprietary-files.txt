@@ -517,7 +517,7 @@ vendor/lib/libchromatix_mot_s5kgm1sp_video.so
 
 # Camera-configs
 vendor/etc/camera/cameraconfig.txt
-vendor/etc/camera/camera_config.xml
+vendor/etc/camera/camera_config.xml:vendor/etc/camera/camera_config_rav.xml
 vendor/etc/camera/dual_golden.bin
 vendor/etc/camera/mot_ov02a_chromatix.xml
 vendor/etc/camera/mot_ov16e10_chromatix.xml
@@ -612,18 +612,17 @@ vendor/lib/libmmcamera_isp_scaler_viewfinder46.so
 vendor/lib/libmmcamera_isp_sce40.so
 vendor/lib/libmmcamera_isp_snr47.so
 vendor/lib/libmmcamera_isp_sub_module.so
-vendor/lib/libmmcamera_mot_ov02a.so
 vendor/lib/libmmcamera_mot_ov02a_eeprom.so
 vendor/lib/libmmcamera_mot_ov12a10ff.so
 vendor/lib/libmmcamera_mot_ov16885.so
 vendor/lib/libmmcamera_mot_ov16885_eeprom.so
+vendor/lib/libmmcamera_mot_ov16a1q_eeprom.so
 vendor/lib/libmmcamera_mot_ov16e10.so
 vendor/lib/libmmcamera_mot_ov16e10_eeprom.so
 vendor/lib/libmmcamera_mot_ov8856.so
 vendor/lib/libmmcamera_mot_ov8856_eeprom.so
 vendor/lib/libmmcamera_mot_s5k2x5sp.so
 vendor/lib/libmmcamera_mot_s5k2x5sp_eeprom.so
-vendor/lib/libmmcamera_mot_s5k4h7.so
 vendor/lib/libmmcamera_mot_s5k4h7yx03.so
 vendor/lib/libmmcamera_mot_s5k4h7yx03_eeprom.so
 vendor/lib/libmmcamera_mot_s5k4h7_eeprom.so
