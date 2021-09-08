@@ -289,7 +289,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.mmi.touch.sh \
-    init.mmi.usb.sh \
     init.hentai.fingerprint.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
@@ -300,9 +299,9 @@ PRODUCT_PACKAGES += \
     init.hidl.sensor.rc \
     init.mmi.chipset.rc \
     init.mmi.overlay.rc \
-    init.mmi.usb.rc \
     init.mmi.rc \
     init.qcom.rc \
+    init.qcom.usb.rc \
     init.target.rc \
     fstab.qcom \
     fstab_ramdisk.qcom \
