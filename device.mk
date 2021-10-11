@@ -55,7 +55,6 @@ PRODUCT_VENDOR_KERNEL_HEADERS := device/motorola/amogus-kernel/trinket/kernel-he
 
 # Overlays
 PRODUCT_PACKAGES += \
-    ravFrameworkOverlay \
     sofiaFrameworkOverlay \
     sofiapFrameworkOverlay \
     sofiapSFrameworkOverlay \
