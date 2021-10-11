@@ -28,6 +28,13 @@ TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 BOARD_VENDOR := motorola
 
+# Workarounds
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_PREBUILT_ELF_FILES := true
+BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
+
 # Platform
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -45,13 +52,13 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
-QCOM_BOARD_PLATFORMS += trinket msmnile
+QCOM_BOARD_PLATFORMS += trinket msmnile sm8150
 MSM_VIDC_TARGET_LIST += trinket
 #BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOOTLOADER_BOARD_NAME := SM6125
 TARGET_BOARD_PLATFORM := trinket
 TARGET_HAS_NO_SELECT_BUTTON := true
-PRODUCT_PLATFORM := msmnile
+PRODUCT_PLATFORM := sm8150
 QC_OPEN_ROOT := vendor/qcom/sm8150/codeaurora
 QC_OPEN_PATH := $(QC_OPEN_ROOT)
 
@@ -184,7 +191,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_PREBUILT_DTBOIMAGE := device/motorola/amogus-kernel/dtbo.img
 
 # HOLY CTS LORDS - Don't patch plz google
-BOARD_KERNEL_CMDLINE += androidboot.verifiedbootstate=green androidboot.vbmeta.device_state=locked
+#BOARD_KERNEL_CMDLINE += androidboot.verifiedbootstate=green androidboot.vbmeta.device_state=locked
 # HOLY CTS LORDS - Don't patch plz google
 
 # Kernel modules

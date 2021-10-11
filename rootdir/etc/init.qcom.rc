@@ -1053,11 +1053,5 @@ service logger /system/bin/logcat -b all -D -f /metadata/boot_log.txt
     oneshot
 
 on fs
-    # Clear existing log and start the service
-    rm /metadata/boot_log.txt
     start logger
-
-on property:sys.boot_completed=1
-    # Stop the logger service
-    stop logger
 

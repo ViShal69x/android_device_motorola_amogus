@@ -26,7 +26,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Enable updating of APEXes
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Utils
 $(call inherit-product, $(LOCAL_PATH)/utils.mk)
@@ -118,6 +118,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
     android.hardware.soundtrigger@2.2-impl \
+    android.hardware.soundtrigger@2.0.vendor \
     audio.a2dp.default \
     audio.primary.trinket \
     audio.r_submix.default \
@@ -314,12 +315,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ims-moto-libs
 
-PRODUCT_BOOT_JARS += \
-    ims-moto-libs \
-    moto-telephony
+#PRODUCT_BOOT_JARS += \
+#    ims-moto-libs \
+#    moto-telephony
 
-PRODUCT_SYSTEM_SERVER_JARS += \
-    moto-telephony
+#PRODUCT_SYSTEM_SERVER_JARS += \
+#    moto-telephony
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -340,6 +341,12 @@ PRODUCT_COPY_FILES += \
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0.vendor \
+    android.hardware.keymaster@4.0.vendor \
+    android.hardware.keymaster@4.1.vendor
 
 # LED packages
 PRODUCT_PACKAGES += \
@@ -368,7 +375,8 @@ PRODUCT_COPY_FILES += \
 
 # Media / StagefrightCodec 2.0
 PRODUCT_PACKAGES += \
-    libstagefright_ccodec
+    libstagefright_ccodec \
+    libstagefright_softomx.vendor
 
 # Memory Configs
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
@@ -381,6 +389,10 @@ PRODUCT_PACKAGES += \
 
 # NeuralNetworks
 PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.0.vendor \
+    android.hardware.neuralnetworks@1.1.vendor \
+    android.hardware.neuralnetworks@1.2.vendor \
+    android.hardware.neuralnetworks@1.3.vendor \
     libtensorflowlite_jni
 
 # NoCutoutOverlay
@@ -481,9 +493,20 @@ PRODUCT_PACKAGES += \
 
 # Radio
 PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.0.vendor \
+    android.hardware.radio.config@1.1.vendor \
+    android.hardware.radio.config@1.2.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio@1.4.vendor \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.secure_element@1.0.vendor \
+    android.hardware.secure_element@1.1.vendor \
+    android.hardware.secure_element@1.2.vendor \
+    com.quicinc.cne.server@2.0.vendor \
+    com.quicinc.cne.server@2.1.vendor \
+    com.quicinc.cne.server@2.2.vendor \
     librmnetctl \
     libprotobuf-cpp-full
-
 
 # Recovery
 TARGET_RECOVERY_DENSITY := xhdpi
@@ -576,6 +599,7 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := strict
 PRODUCT_PRODUCT_VNDK_VERSION := current
+PRODUCT_EXTRA_VNDK_VERSIONS := 30 29
 
 # Wifi
 PRODUCT_COPY_FILES += \

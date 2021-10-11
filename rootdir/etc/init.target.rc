@@ -51,6 +51,7 @@ on early-fs
 
 on fs
     mount_all /vendor/etc/fstab.qcom --early
+    start logger
     setprop sys.usb.config adb
     start adbd
     chown root system /mnt/vendor/persist
