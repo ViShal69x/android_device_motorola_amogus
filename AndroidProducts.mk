@@ -15,6 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/aosp_amogus.mk \
     $(LOCAL_DIR)/hentai_amogus.mk
 
 COMMON_LUNCH_CHOICES := \
