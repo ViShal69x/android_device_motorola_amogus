@@ -1053,5 +1053,6 @@ service logger /system/bin/logcat -b all -D -f /metadata/boot_log.txt
     oneshot
 
 on fs
+    rm /metadata/boot_log.txt
     start logger
 
