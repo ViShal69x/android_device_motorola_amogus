@@ -544,6 +544,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libgbp_shim \
     libmemset_shim \
     libqsap_shim
 

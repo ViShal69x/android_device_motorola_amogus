@@ -60,6 +60,11 @@ function blob_fixup() {
         patchelf --add-needed libmemset_shim.so "${2}"
         ;;
 
+    # gbp shim
+    vendor/lib/libmot_gpu_mapper.so)
+        patchelf --add-needed libgbp_shim.so "${2}"
+        ;;
+
     # qsap shim
     vendor/lib64/libmdmcutback.so)
         patchelf --add-needed libqsap_shim.so "${2}"
