@@ -187,6 +187,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5 \
+    android.frameworks.displayservice@1.0.vendor \
     camera.device@3.2-impl \
     libbson.vendor \
     libxml2 \
