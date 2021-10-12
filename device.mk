@@ -165,7 +165,7 @@ TARGET_SCREEN_WIDTH := 720
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0 \
+    android.hardware.bluetooth@1.0.vendor \
     audio.bluetooth.default \
     android.hardware.bluetooth.audio@2.0-impl \
     libbt-vendor \
@@ -228,11 +228,15 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0.vendor \
+    android.hardware.drm@1.1.vendor \
+    android.hardware.drm@1.2.vendor \
+    android.hardware.drm@1.3.vendor \
     android.hardware.drm@1.3-service-lazy.clearkey
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1
+    android.hardware.biometrics.fingerprint@2.1.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
@@ -242,6 +246,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     FM2 \
     libqcomfm_jni \
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0.vendor
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -313,11 +321,12 @@ PRODUCT_PACKAGES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    ims-moto-libs
+    ims-moto-libs \
+    moto-telephony
 
-#PRODUCT_BOOT_JARS += \
-#    ims-moto-libs \
-#    moto-telephony
+PRODUCT_BOOT_JARS += \
+    ims-moto-libs \
+    moto-telephony
 
 #PRODUCT_SYSTEM_SERVER_JARS += \
 #    moto-telephony
@@ -355,6 +364,11 @@ PRODUCT_PACKAGES += \
 # MotoActions
 PRODUCT_PACKAGES += \
     MotoActions
+
+# NetD
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.0.vendor \
+    android.system.net.netd@1.1.vendor
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
