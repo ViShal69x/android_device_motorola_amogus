@@ -4,7 +4,7 @@ device=`getprop ro.boot.device`
 rav()
 {
     setprop ro.boot.product.vendor.sku rav
-    setprop ro.sf.lcd_density 280
+    setprop ro.sf.lcd_density 240
     setprop persist.vendor.audio.calfile0 /vendor/etc/acdbdata/rav/Bluetooth_cal.acdb
     setprop persist.vendor.audio.calfile1 /vendor/etc/acdbdata/rav/General_cal.acdb
     setprop persist.vendor.audio.calfile2 /vendor/etc/acdbdata/rav/Global_cal.acdb
