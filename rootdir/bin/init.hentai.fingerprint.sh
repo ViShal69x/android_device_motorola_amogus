@@ -5,8 +5,10 @@ fps_id=`cat /proc/config/fps_id/ascii`
 
 if [[ $fps_id == "fpc" ]]; then
 	insmod /vendor/lib/modules/fpc1020_mmi.ko
+	sleep 1
 	start fps_hal
 else
 	insmod /vendor/lib/modules/ets_fps_mmi.ko
+	sleep 1
 	start ets_hal
 fi
