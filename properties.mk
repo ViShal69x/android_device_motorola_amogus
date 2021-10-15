@@ -263,6 +263,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
 
+# USB
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.usb.use_ffs_mtp=1
+
 # Voice assistant
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opa.eligible_device=true
