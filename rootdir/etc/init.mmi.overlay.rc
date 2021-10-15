@@ -13,9 +13,6 @@ service capsense_reset /system/vendor/bin/capsense_reset
    group system input
    disabled
 
-on property:sys.boot_completed=1
-    start capsense_reset
-
 on early-init
    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules focaltech_0flash_mmi nova_0flash_mmi himax_v2_mmi_hx83112 himax_v2_mmi
    insmod /vendor/lib/modules/sx933x_sar.ko
