@@ -151,5 +151,12 @@ $(SENSORS_CONFIG_MOUNT_POINT):
 	@mkdir -p $(SENSORS_CONFIG_MOUNT_POINT)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(SENSORS_CONFIG_MOUNT_POINT)
+
+TENSORFLOWLITE_SYMLINK := $(TARGET_OUT_SYSTEM_EXT)/priv-app/SystemUIGoogle/lib/arm64/libtensorflowlite_jni.so
+$(TENSORFLOWLITE_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@mkdir -p $(dir $@)
+	$(hide) ln -sf /system/lib64/libtensorflowlite_jni.so $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(TENSORFLOWLITE_SYMLINK)
 endif
 
