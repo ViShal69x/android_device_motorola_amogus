@@ -225,6 +225,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ril.subscription.types=NV,RUIM \
     telephony.lteOnCdmaDevice=1
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.fflag.override.settings_provider_model=false
+
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.sensors=amogus \
