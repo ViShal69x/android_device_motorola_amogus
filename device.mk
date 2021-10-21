@@ -335,6 +335,9 @@ PRODUCT_PACKAGES += \
     libipanat \
     liboffloadhal
 
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/data-ipa-cfg-mgr
+
 # IPv6 tethering
 PRODUCT_PACKAGES += \
     ebtables \
