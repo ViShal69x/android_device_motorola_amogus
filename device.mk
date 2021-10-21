@@ -288,11 +288,6 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0-java \
     libhwbinder.vendor
 
-# IMS
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml
-
 # Init
 PRODUCT_PACKAGES += \
     init.class_main.sh \
@@ -321,6 +316,8 @@ PRODUCT_PACKAGES += \
 
 # IMS
 PRODUCT_PACKAGES += \
+    ims-ext-common \
+    ims_ext_common.xml \
     ims-moto-libs \
     moto-telephony
 
