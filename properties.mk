@@ -107,6 +107,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.comp_mask=0 \
     vendor.display.enable_optimize_refresh=1 \
     vendor.display.disable_ui_3d_tonemap=1 \
+    vendor.display.disable_skip_validate=1 \
     debug.sf.hw=0 \
     debug.egl.hw=0
 
