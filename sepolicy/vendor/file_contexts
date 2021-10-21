@@ -23,7 +23,7 @@
 /vendor/bin/init.mmi.touch.sh u:object_r:mmi-touch-sh_exec:s0
 
 # Lights
-/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.trinket              u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/hardware\.google\.light@1\.1-service\.amogus              u:object_r:hal_light_default_exec:s0
 
 # Power
 /vendor/bin/hw/android\.hardware\.power-service\.trinket-libperfmgr u:object_r:hal_power_default_exec:s0

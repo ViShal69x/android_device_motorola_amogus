@@ -358,8 +358,8 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
 # LED packages
-PRODUCT_PACKAGES += \
-    android.hardware.lights-service.trinket
+#PRODUCT_PACKAGES += \
+#    hardware.google.light@1.1-service.amogus
 
 # MotoActions
 PRODUCT_PACKAGES += \
