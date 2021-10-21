@@ -82,7 +82,6 @@ on post-fs-data
 # For cpusets initialize for Silver Only first and then Silver + Gold
 # Silver Only configuration cannot work with 0-7
 on boot
-    chown system system /sys/kernel/hbtp/display_pwr
     start rmt_storage
     start rfs_access
     write /dev/cpuset/top-app/cpus 0-3
@@ -146,13 +145,6 @@ service vendor.per_proxy /vendor/bin/pm-proxy
     user system
     group system
     disabled
-
-on property:sys.boot_completed=1
-    # cpuset settings
-    write /dev/cpuset/foreground/cpus 0-6
-    write /dev/cpuset/foreground/boost/cpus 0-6
-    write /dev/cpuset/background/cpus 0-3
-    write /dev/cpuset/system-background/cpus 0-5
 
 on property:init.svc.vendor.per_mgr=running
     start vendor.per_proxy
@@ -374,3 +366,11 @@ service vendor.amogus /vendor/bin/init.amogus.sh
     class core
     user root
     oneshot
+
+on property:vendor.post_boot.parsed=1
+    # Setup cpusets
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/foreground/cpus 0-2,5-7
+    write /dev/cpuset/background/cpus 0-3
+    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/restricted/cpus 0-3
