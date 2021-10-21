@@ -409,6 +409,10 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor \
     libtensorflowlite_jni
 
+# Misc Interfaces
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.servicetracker@1.2.vendor
+
 # NoCutoutOverlay
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
