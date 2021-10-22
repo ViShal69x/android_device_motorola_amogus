@@ -47,6 +47,10 @@ vendor/lib/libchromatix_mot_ov16e10_row_3a_zsl_video.so|77357ac89f6673a86ec0daaa
 vendor/lib/libchromatix_mot_ov16e10_row_cpp_snapshot_downscale.so|e29805c704fa281fda63e1524300355cc448d7bd
 vendor/lib/libchromatix_mot_ov16e10_row_cpp_video.so|04dfe1047308d2aa4b2e309116bf0ec5bc93fc4d
 
+# Display-calibration - from sofia/r
+vendor/etc/qdcm_calib_data_mipi_mot_vid_auo_1080p_636.xml
+vendor/etc/qdcm_calib_data_mipi_mot_vid_tianma_1080p_636.xml
+
 # Firmware - from sofiar
 vendor/firmware/aw8624_haptic.bin|42f7498f3869cf3138b50138739d29a5349d0ba4
 vendor/firmware/aw8624_rtp.bin|3c06255839cd1884e8d9826952e9bfc7842dc671
