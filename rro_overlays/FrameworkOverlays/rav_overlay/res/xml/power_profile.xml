@@ -26,20 +26,14 @@
         <value>4</value>
     </array>
     <array name="cpu.core_speeds.cluster0">
-        <value>300000</value>
-        <value>614400</value>
         <value>864000</value>
         <value>1017600</value>
         <value>1305600</value>
-        <value>1420800</value>
         <value>1612800</value>
         <value>1804800</value>
     </array>
     <array name="cpu.core_speeds.cluster1">
-        <value>300000</value>
-        <value>652800</value>
         <value>902400</value>
-        <value>1056000</value>
         <value>1401600</value>
         <value>1536000</value>
         <value>1804800</value>
