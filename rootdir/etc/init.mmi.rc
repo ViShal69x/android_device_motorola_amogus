@@ -360,10 +360,43 @@ on property:vendor.hw.touch.status="dead"
 on property:vendor.hw.touch.status="ready"
     start vendor.touch-ready-sh
 
-service vendor.charge_only_mode /vendor/bin/charge_only_mode
-    user root
-    group graphics system input
-    disabled
+service charger /system/bin/charger
+    class charger
+    seclabel u:r:charger:s0
+    user system
+    group system wakelock input
+    capabilities SYS_BOOT
+    file /dev/kmsg w
+    file /sys/fs/pstore/console-ramoops-0 r
+    file /sys/fs/pstore/console-ramoops r
+    file /proc/last_kmsg r
+
+on property:init.svc.charger=running
+    write /sys/class/typec/port0/port_type sink
+
+on charger
+    trigger firmware_mounts_complete
+    write /config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
+    write /config/usb_gadget/g1/strings/0x409/manufacturer ${ro.product.manufacturer}
+    write /config/usb_gadget/g1/strings/0x409/product ${ro.product.model}
+    setprop sys.usb.configfs 1
+    setprop sys.usb.config charging
+    start vendor.hvdcp_opti
+    start vendor.gbmodinstall
+    start charger
+    start vendor.batt_health
+    start vendor.thermal-com
+    start system_suspend
+
+    write /sys/devices/system/cpu/cpu0/online 1
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
+    write /sys/devices/system/cpu/cpu1/online 0
+    write /sys/devices/system/cpu/cpu2/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/devices/system/cpu/cpu4/online 0
+    write /sys/devices/system/cpu/cpu5/online 0
+    write /sys/devices/system/cpu/cpu6/online 0
+    write /sys/devices/system/cpu/cpu7/online 0
 
 service vendor.thermal-com /vendor/bin/thermal-engine --minimode
     class main

@@ -653,11 +653,9 @@ vendor/lib64/libmmcamera_tintless_algo.so
 vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
 
 # Charger
-vendor/bin/charge_only_mode
 vendor/bin/hvdcp_opti
 vendor/bin/init.qti.chg_policy.sh
 vendor/etc/charger_fstab.qti
-vendor/etc/init/hw/init.mmi.charge_only.rc
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
 # CryptFSHW

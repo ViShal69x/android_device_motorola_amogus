@@ -1,5 +1,5 @@
 # Charge only mode configuration
-import /vendor/etc/init/hw/init.mmi.charge_only.rc
+#import /vendor/etc/init/hw/init.mmi.charge_only.rc
 
 # Chipset-specific init settings
 service fingerprintd /system/bin/fingerprintd
