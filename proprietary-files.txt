@@ -608,6 +608,7 @@ vendor/lib/libmmcamera_isp_sce40.so
 vendor/lib/libmmcamera_isp_snr47.so
 vendor/lib/libmmcamera_isp_sub_module.so
 vendor/lib/libmmcamera_mot_ov02a_eeprom.so
+vendor/lib/libmmcamera_mot_ov02a.so
 vendor/lib/libmmcamera_mot_ov12a10ff.so
 vendor/lib/libmmcamera_mot_ov16885.so
 vendor/lib/libmmcamera_mot_ov16885_eeprom.so
