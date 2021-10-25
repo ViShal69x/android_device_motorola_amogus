@@ -64,8 +64,7 @@ PRODUCT_PACKAGES += \
     sofiarSystemUIOverlay
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
@@ -81,6 +80,7 @@ AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
+    recovery \
     system \
     vendor \
     product
@@ -244,8 +244,11 @@ PRODUCT_COPY_FILES += \
 
 # FM
 PRODUCT_PACKAGES += \
-    FM2 \
+    FMRadio \
     libqcomfm_jni \
+    qcom.fmradio
+
+PRODUCT_BOOT_JARS += qcom.fmradio
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -269,10 +272,6 @@ PRODUCT_PACKAGES += \
     lowi.conf \
     sap.conf \
     xtwifi.conf
-
-# GMS
-PRODUCT_GMS_CLIENTID_BASE := android-motorola
-WITH_GMS_FI := true
 
 # Health
 PRODUCT_PACKAGES += \
@@ -299,7 +298,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sensors.sh \
     init.qcom.sh \
     init.qti.qseecomd.sh \
-    init.amogus.sh \
     init.hidl.sensor.rc \
     init.mmi.chipset.rc \
     init.mmi.overlay.rc \
@@ -312,7 +310,8 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    init.amogus.rc
+    init.amogus.rc \
+    init.amogus.sh
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -370,11 +369,6 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.0.vendor \
     android.system.net.netd@1.1.vendor
 
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm \
-    vendor.lineage.livedisplay@2.0-service-sysfs
-
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail.vendor
@@ -394,7 +388,6 @@ PRODUCT_PACKAGES += \
 
 # Memory Configs
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
 # Network
@@ -589,10 +582,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libtinyxml2
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
@@ -600,11 +589,6 @@ PRODUCT_PACKAGES += \
 # Vibrator
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
-
-# Verity
-# PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/7824900.sdhci/by-name/system
-# PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/soc/7824900.sdhci/by-name/vendor
-# $(call inherit-product, build/target/product/verity.mk)
 
 # VNDK
 # Update this list with what each blob is actually for

@@ -42,12 +42,13 @@ TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_VARIANT := kryo
 TARGET_CPU_SMP := true
 
+ifeq (,$(filter %_64,$(TARGET_PRODUCT)))
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
-ARCH_ARM_HAVE_TLS_REGISTER := true
+endif
 
 QCOM_BOARD_PLATFORMS += trinket msmnile sm8150
 MSM_VIDC_TARGET_LIST += trinket
@@ -76,47 +77,9 @@ BOARD_USES_ALSA_AUDIO := true
 TRINKET := trinket
 TARGET_USES_HARDWARE_QCOM_AUDIO := true
 
-TARGET_MODULE_ALIASES += \
-    adsp_loader_dlkm.ko:audio_adsp_loader.ko \
-    apr_dlkm.ko:audio_apr.ko \
-    bolero_cdc_dlkm.ko:audio_bolero_cdc.ko \
-    cpe_lsm_dlkm.ko:audio_cpe_lsm.ko \
-    hdmi_dlkm.ko:audio_hdmi.ko \
-    machine_dlkm.ko:audio_machine_trinket.ko \
-    mbhc_dlkm.ko:audio_mbhc.ko \
-    native_dlkm.ko:audio_native.ko \
-    pinctrl_lpi_dlkm.ko:audio_pinctrl_lpi.ko \
-    pinctrl_wcd_dlkm.ko:audio_pinctrl_wcd.ko \
-    platform_dlkm.ko:audio_platform.ko \
-    q6_dlkm.ko:audio_q6.ko \
-    q6_notifier_dlkm.ko:audio_q6_notifier.ko \
-    q6_pdr_dlkm.ko:audio_q6_pdr.ko \
-    rx_macro_dlkm.ko:audio_rx_macro.ko \
-    snd_event_dlkm.ko:audio_snd_event.ko \
-    stub_dlkm.ko:audio_stub.ko \
-    swr_ctrl_dlkm.ko:audio_swr_ctrl.ko \
-    swr_dlkm.ko:audio_swr.ko \
-    tx_macro_dlkm.ko:audio_tx_macro.ko \
-    usf_dlkm.ko:audio_usf.ko \
-    va_macro_dlkm.ko:audio_va_macro.ko \
-    wcd934x_dlkm.ko:audio_wcd934x.ko \
-    wcd9355_dlkm.ko:audio_wcd9355.ko \
-    wcd937x_dlkm.ko:audio_wcd937x.ko \
-    wcd937x_slave_dlkm.ko:audio_wcd937x_slave.ko \
-    wcd9xxx_dlkm.ko:audio_wcd9xxx.ko \
-    wcd_core_dlkm.ko:audio_wcd_core.ko \
-    wcd_cpe_dlkm.ko:audio_wcd_cpe.ko \
-    wcd_spi_dlkm.ko:audio_wcd_spi.ko \
-    wglink_dlkm.ko:audio_wglink.ko \
-    wsa881x_dlkm.ko:audio_wsa881x.ko \
-    wsa_macro_dlkm.ko:audio_wsa_macro.ko
-
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := build/make/target/board/mainline_arm64/bluetooth
 TARGET_USE_QTI_BT_SAR := true
-
-# Boot Animtion
-TARGET_BOOTANIMATION_HALF_RES := true
 
 # Camera
 USE_CAMERA_STUB := true
@@ -160,10 +123,6 @@ TARGET_FS_CONFIG_GEN += \
     $(DEVICE_PATH)/config.fs \
     $(DEVICE_PATH)/mot_aids.fs
 
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_amogus
-TARGET_RECOVERY_DEVICE_MODULES := libinit_amogus
-
 # Kernel
 BOARD_KERNEL_CMDLINE := console=tty0 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 service_locator.enable=1
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive reboot_panic=warm
@@ -174,7 +133,6 @@ BOARD_KERNEL_OFFSET        := 0x00008000
 BOARD_RAMDISK_OFFSET       := 0x01000000
 BOARD_KERNEL_TAGS_OFFSET   := 0x00000100
 BOARD_DTB_OFFSET           := 0x01f00000
-#BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_KERNEL_VERSION := 4.14
 TARGET_KERNEL_ARCH := arm64
@@ -188,19 +146,12 @@ BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_PREBUILT_DTBOIMAGE := device/motorola/amogus-kernel/dtbo.img
 
-# HOLY CTS LORDS - Don't patch plz google
-#BOARD_KERNEL_CMDLINE += androidboot.verifiedbootstate=green androidboot.vbmeta.device_state=locked
-# HOLY CTS LORDS - Don't patch plz google
-
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES += \
     $(wildcard device/motorola/amogus-kernel/*.ko)
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
-
-# Memory Config
-MALLOC_SVELTE := true
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072                   # (BOARD_KERNEL_PAGESIZE * 64)
@@ -233,7 +184,6 @@ BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := \
 
 # Power
 TARGET_HAS_NO_WLAN_STATS := true
-TARGET_USES_INTERACTION_BOOST := true
 
 # RIL
 TARGET_USES_OLD_MNC_FORMAT := true
@@ -247,7 +197,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 BOARD_ROOT_EXTRA_FOLDERS := persist
 
 # Vendor Security Patch Level
-VENDOR_SECURITY_PATCH := 2020-03-01
+VENDOR_SECURITY_PATCH := 2021-08-01
 
 # SELinux
 include device/qcom/sepolicy_vndr/SEPolicy.mk
@@ -293,7 +243,3 @@ QC_WIFI_HIDL_FEATURE_DUAL_AP := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 PRODUCT_VENDOR_MOVE_ENABLED := true
-
-# Kernel modules - WLAN
-TARGET_MODULE_ALIASES += \
-    wlan.ko:qca_cld3_wlan.ko
